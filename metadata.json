@@ -1,0 +1,6 @@
+{
+  "name": "VATIO — Análisis y Optimización Energética",
+  "description": "Plataforma inteligente de análisis, diagnóstico, control y optimización del consumo eléctrico residencial y comercial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

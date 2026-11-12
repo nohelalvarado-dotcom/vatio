@@ -1,0 +1,2144 @@
+# VATIO — PROMPT MAESTRO 02
+# REDISEÑO VISUAL PREMIUM, EXPERIENCIA DE USUARIO, INTERNACIONALIZACIÓN Y PERFECCIONAMIENTO INTEGRAL DE TODA LA APLICACIÓN
+
+## INSTRUCCIÓN GENERAL Y PRIORIDAD MÁXIMA
+
+Estamos trabajando sobre un proyecto VATIO que ya ha sido creado y cuya interfaz inicial se encuentra implementada.
+
+Esta es la segunda gran fase de desarrollo.
+
+Tu misión consiste en realizar una transformación integral del proyecto existente para convertir VATIO en una aplicación comercial de alta calidad, visualmente extraordinaria, técnicamente consistente, cómoda de utilizar y preparada para su distribución internacional.
+
+No quiero una nueva aplicación desde cero.
+
+No quiero una landing page.
+
+No quiero una maqueta.
+
+No quiero que reemplaces el proyecto por una demostración visual.
+
+Quiero que inspecciones el proyecto existente, comprendas su arquitectura, conserves sus funcionalidades, mejores todas sus interfaces, perfecciones los módulos y añadas las características que se especifican a continuación.
+
+**La prioridad de esta intervención es elevar radicalmente la calidad visual y la experiencia de usuario de TODA la aplicación, manteniendo y mejorando su funcionamiento real.**
+
+La interfaz actual tiene los siguientes problemas que debes resolver:
+
+1. Las tarjetas ocupan demasiado espacio y presentan información insuficiente.
+2. Existen grandes superficies vacías que hacen que la aplicación parezca incompleta.
+3. La jerarquía visual de los componentes es poco sofisticada.
+4. El panel principal tiene aspecto de plantilla administrativa genérica.
+5. El diseño carece de personalidad visual propia.
+6. Los gráficos, indicadores y elementos informativos necesitan un tratamiento mucho más profesional.
+7. Los botones y las acciones necesitan un sistema de interacción coherente.
+8. La interfaz debe ofrecer una experiencia mucho más cómoda en teléfonos, tablets y ordenadores.
+9. El modo claro y oscuro deben ser auténticos diseños completos, no simplemente una inversión de colores.
+10. La aplicación necesita un sistema internacional de idiomas, monedas, países y configuraciones regionales.
+
+La transformación debe aplicarse a absolutamente todas las secciones.
+
+---
+
+# PARTE I. NUEVA DIRECCIÓN ARTÍSTICA DE VATIO
+
+## 1. Nueva identidad visual
+
+Quiero que VATIO transmita la sensación de utilizar un producto tecnológico de primera categoría.
+
+Toma como referencias estéticas las interfaces premium de aplicaciones de análisis financiero, herramientas de inteligencia empresarial, plataformas de gestión energética y productos tecnológicos modernos.
+
+La estética debe combinar:
+
+- Elegancia.
+- Tecnología.
+- Precisión.
+- Claridad.
+- Modernidad.
+- Profundidad visual.
+- Profesionalidad.
+- Sofisticación.
+- Sensación de producto terminado.
+
+No quiero que parezca una aplicación creada mediante una plantilla predeterminada.
+
+Quiero una identidad visual reconocible y consistente.
+
+### 1.1. Concepto visual
+
+Desarrolla una estética denominada:
+
+**ENERGY INTELLIGENCE — PREMIUM TECHNOLOGY INTERFACE.**
+
+La idea es que VATIO parezca un centro avanzado de control energético.
+
+Utiliza como elementos visuales:
+
+- Fondos azul noche.
+- Superficies de diferentes profundidades.
+- Paneles con bordes muy sutiles.
+- Gradientes energéticos discretos.
+- Verde eléctrico como color de eficiencia.
+- Cian como color tecnológico.
+- Gráficos refinados.
+- Indicadores circulares y lineales.
+- Iconografía consistente.
+- Iluminación ambiental muy suave.
+- Transparencias selectivas.
+- Sombras controladas.
+- Separación visual mediante jerarquía y contraste.
+
+Evita utilizar demasiados efectos de vidrio, desenfoques excesivos, brillos artificiales o degradados intensos.
+
+La elegancia debe proceder de la composición, la tipografía, los colores y las proporciones.
+
+## 2. Paleta de colores definitiva
+
+Construye un sistema de diseño mediante variables CSS.
+
+### Modo oscuro
+
+Fondo general:
+
+- #0B1220.
+- #0F1728.
+
+Superficies principales:
+
+- #141F32.
+- #19273B.
+- #202F45.
+
+Superficies elevadas:
+
+- #24364D.
+- #293D55.
+
+Color primario:
+
+- #35D39A.
+
+Color energético secundario:
+
+- #21B985.
+
+Color tecnológico:
+
+- #42C7D9.
+
+Texto principal:
+
+- #F2F6FC.
+
+Texto secundario:
+
+- #A7B6CA.
+
+Texto discreto:
+
+- #788BA4.
+
+Bordes:
+
+- rgba(255,255,255,0.08).
+
+Advertencias:
+
+- #F1B653.
+
+Errores:
+
+- #F07676.
+
+### Modo claro
+
+El modo claro debe ser igualmente elegante.
+
+Fondo general:
+
+- #F3F6FA.
+
+Superficies:
+
+- #FFFFFF.
+
+Superficies secundarias:
+
+- #F7F9FC.
+
+Primario:
+
+- #079D70.
+
+Secundario:
+
+- #13B981.
+
+Cian:
+
+- #079FB5.
+
+Texto principal:
+
+- #172438.
+
+Texto secundario:
+
+- #64758B.
+
+Bordes:
+
+- #E4EAF1.
+
+Advertencias:
+
+- #A86B10.
+
+Errores:
+
+- #C94343.
+
+No uses exactamente los mismos colores de texto en ambos modos.
+
+Cada tema debe tener contraste, jerarquía y estados correctamente adaptados.
+
+## 3. Tipografía
+
+Rediseña el sistema tipográfico.
+
+Prioriza una tipografía moderna como Inter o Manrope, siempre que se encuentre disponible o pueda integrarse correctamente.
+
+Utiliza:
+
+- Pesos 400 para texto.
+- Pesos 500 para etiquetas.
+- Pesos 600 para títulos secundarios.
+- Pesos 700 para encabezados importantes.
+- Pesos 800 únicamente en elementos destacados.
+
+Los números deben tener una apariencia especialmente cuidada.
+
+Utiliza cifras tabulares para:
+
+- Importes monetarios.
+- kWh.
+- Potencias.
+- Porcentajes.
+- Variaciones.
+- Fechas.
+
+Los valores principales deben ser fácilmente identificables incluso desde un teléfono.
+
+## 4. Sistema de tarjetas
+
+Reemplaza el diseño actual de las tarjetas por un sistema visual más refinado.
+
+Quiero distintos tipos de tarjetas:
+
+**A. Tarjetas KPI**
+
+Para cifras importantes.
+
+Características:
+
+- Etiqueta pequeña.
+- Valor protagonista.
+- Unidad.
+- Variación respecto al periodo anterior.
+- Icono contextual.
+- Mini gráfico opcional.
+- Indicador de origen de los datos.
+
+**B. Tarjetas analíticas**
+
+Para gráficos y análisis.
+
+Deben tener:
+
+- Encabezado.
+- Descripción secundaria.
+- Controles de periodo.
+- Área gráfica.
+- Leyenda.
+- Acciones adicionales.
+
+**C. Tarjetas de acciones**
+
+Para recomendaciones y tareas.
+
+Deben presentar claramente la acción y su beneficio.
+
+**D. Tarjetas compactas**
+
+Para listas de facturas, aparatos, escenarios y registros.
+
+No todas las tarjetas deben tener el mismo tamaño.
+
+**E. Tarjetas destacadas**
+
+Reservadas para información especialmente importante.
+
+Utiliza gradientes sutiles y fondos profundos únicamente donde aporten valor.
+
+**F. Tarjetas de estado vacío**
+
+Cuando no haya datos, no muestres una superficie blanca gigantesca con un icono pequeño.
+
+Crea estados vacíos elegantes, compactos y útiles, con una ilustración o icono contextual, una explicación breve y una acción principal.
+
+## 5. Sistema de iconografía
+
+Utiliza una sola familia de iconos, preferentemente Lucide.
+
+No mezcles emojis con iconos profesionales.
+
+Los iconos deben tener:
+
+- Tamaño consistente.
+- Grosor uniforme.
+- Estados activos.
+- Estados inactivos.
+- Colores contextuales.
+- Etiquetas accesibles.
+
+No utilices iconos distintos para representar la misma función en diferentes secciones.
+
+---
+
+# PARTE II. REDISEÑO DE LA ESTRUCTURA GENERAL
+
+## 6. Nueva barra lateral
+
+La barra lateral actual necesita una transformación completa.
+
+Debe tener una identidad más moderna y utilizar correctamente el espacio disponible.
+
+### 6.1. Encabezado de marca
+
+Incorpora:
+
+- Logotipo VATIO.
+- Nombre de la aplicación.
+- Subtítulo ENERGY INTELLIGENCE.
+- Indicador discreto de versión.
+
+El logotipo debe utilizar el símbolo energético de VATIO, pero debe rediseñarse para integrarse mejor con la nueva identidad.
+
+### 6.2. Instalación seleccionada
+
+Debajo de la marca, incorpora un selector elegante para la instalación activa.
+
+Ejemplo:
+
+Mi hogar principal.
+
+Al pulsarlo abre una ventana con:
+
+- Lista de instalaciones.
+- Tipo de instalación.
+- País.
+- Moneda.
+- Distribuidora.
+- Añadir instalación.
+- Editar instalación.
+
+Esta opción debe estar preparada para futuras versiones con múltiples viviendas y negocios.
+
+### 6.3. Navegación
+
+Agrupa las herramientas en categorías.
+
+**CONTROL ENERGÉTICO**
+
+- Mi energía.
+- Facturas.
+- Mis aparatos.
+- Laboratorio.
+- Diagnóstico.
+- Plan de ahorro.
+
+**ANÁLISIS Y HERRAMIENTAS**
+
+- Tarifas eléctricas.
+- Calculadora.
+- Glosario.
+- Informes y respaldos.
+
+**SISTEMA**
+
+- Configuración.
+- Ayuda.
+
+Cada sección tendrá:
+
+- Icono.
+- Texto.
+- Estado activo.
+- Estado hover.
+- Tooltip.
+- Navegación funcional.
+
+La sección activa debe tener una indicación visual refinada, no solamente un rectángulo verde.
+
+### 6.4. Barra lateral adaptable
+
+En escritorio:
+
+- Anchura ampliada cuando está desplegada.
+- Modo compacto con solamente iconos.
+- Botón para expandir y contraer.
+- Estado guardado localmente.
+
+En móvil:
+
+- Navegación lateral mediante un menú deslizante.
+- Fondo superpuesto.
+- Cierre al seleccionar una sección.
+- No ocupar permanentemente el espacio de la pantalla.
+
+## 7. Nueva barra superior
+
+Construye una barra superior profesional.
+
+Debe incorporar:
+
+1. Migas de pan.
+2. Nombre de la sección actual.
+3. Selector de instalación.
+4. Búsqueda global.
+5. Acceso a notificaciones.
+6. Ayuda contextual.
+7. Selector de idioma.
+8. Selector de apariencia.
+9. Acceso a configuración.
+
+No amontones todos los controles.
+
+Distribúyelos de manera equilibrada.
+
+En móvil, agrupa controles secundarios dentro de un menú.
+
+### 7.1. Búsqueda global
+
+Implementa búsqueda en:
+
+- Facturas.
+- Aparatos.
+- Tarifas.
+- Escenarios.
+- Diagnósticos.
+- Informes.
+
+Debe mostrar resultados agrupados por categoría.
+
+Incluye un acceso rápido mediante Ctrl + K en escritorio.
+
+Al seleccionar un resultado, debe abrir la pantalla y el registro correspondientes.
+
+### 7.2. Notificaciones
+
+Crear un centro de notificaciones locales.
+
+Mostrar:
+
+- Diagnósticos pendientes.
+- Facturas registradas recientemente.
+- Recordatorios.
+- Acciones de ahorro por revisar.
+- Cambios relevantes.
+
+Incluye:
+
+- Marcar como leída.
+- Marcar todas como leídas.
+- Eliminar una notificación.
+- Limpiar notificaciones.
+- Filtrar por categoría.
+
+No inventes notificaciones cuando no haya ninguna.
+
+---
+
+# PARTE III. CENTRO DE PERSONALIZACIÓN DE LA INTERFAZ
+
+## 8. Cambio entre modo oscuro y modo claro
+
+Esta función es obligatoria y debe estar disponible siempre desde la barra superior.
+
+Crea un botón elegante con icono de sol y luna.
+
+Al pulsarlo, muestra tres posibilidades:
+
+- Modo claro.
+- Modo oscuro.
+- Automático.
+
+### Comportamiento
+
+Al seleccionar modo oscuro:
+
+- Cambia toda la aplicación.
+- Cambia tarjetas.
+- Cambia gráficos.
+- Cambia formularios.
+- Cambia diálogos.
+- Cambia menús.
+- Cambia tablas.
+- Cambia estados vacíos.
+- Cambia tooltips.
+- Cambia todos los componentes.
+
+Al seleccionar modo claro, realiza el proceso correspondiente.
+
+En modo automático, utiliza la preferencia del sistema.
+
+La preferencia debe guardarse en IndexedDB o en el mecanismo local apropiado y recuperarse al reiniciar la aplicación.
+
+Implementa el cambio sin recargar la página.
+
+Evita el parpadeo del tema inicial al cargar.
+
+No permitas que alguna sección permanezca en modo claro mientras las demás están oscuras.
+
+### 8.1. Personalización adicional
+
+Añade la posibilidad de:
+
+- Elegir densidad visual compacta o cómoda.
+- Activar o desactivar animaciones decorativas.
+- Elegir tamaño de texto normal o grande.
+- Restaurar los valores predeterminados.
+
+No añadas personalizaciones que compliquen innecesariamente la experiencia.
+
+---
+
+# PARTE IV. INTERNACIONALIZACIÓN Y TRADUCCIÓN GLOBAL
+
+## 9. Convertir VATIO en una aplicación internacional
+
+Quiero que VATIO pueda utilizarse en diferentes países y que cada usuario pueda elegir su idioma, moneda, país, región y configuración energética.
+
+No limites la aplicación a Costa Rica.
+
+Prepara una arquitectura internacional real.
+
+### 9.1. Selector de idiomas
+
+Incorpora un botón de idioma en la barra superior y en Configuración.
+
+Al pulsarlo, abre una ventana elegante con:
+
+- Nombre del idioma en su idioma original.
+- Nombre traducido.
+- Código del idioma.
+- Icono de selección.
+- Campo de búsqueda.
+
+Idiomas iniciales:
+
+1. Español.
+2. Inglés.
+3. Portugués.
+4. Francés.
+5. Alemán.
+6. Italiano.
+7. Japonés.
+8. Chino simplificado.
+9. Chino tradicional.
+10. Coreano.
+11. Árabe.
+12. Hindi.
+13. Ruso.
+14. Neerlandés.
+15. Turco.
+
+Diseña la arquitectura para que puedan añadirse más idiomas sin modificar todos los componentes.
+
+### 9.2. Traducción de toda la interfaz
+
+No traduzcas únicamente los menús.
+
+Deben localizarse:
+
+- Menús.
+- Botones.
+- Encabezados.
+- Formularios.
+- Etiquetas.
+- Errores.
+- Mensajes de confirmación.
+- Notificaciones.
+- Tooltips.
+- Gráficos.
+- Leyendas.
+- Estados vacíos.
+- Informes.
+- Documentos PDF.
+- Centro de ayuda.
+- Configuración.
+- Ventanas emergentes.
+- Mensajes de validación.
+
+No dejes textos fijos en español dentro de los componentes.
+
+Utiliza un sistema real de internacionalización, preferentemente i18next con react-i18next, o una alternativa equivalente compatible con el proyecto existente.
+
+Organiza las traducciones en archivos separados.
+
+Ejemplo:
+
+```text
+locales/
+  es/
+    common.json
+    dashboard.json
+    invoices.json
+    appliances.json
+    laboratory.json
+    diagnostics.json
+    savings.json
+    settings.json
+
+  en/
+    common.json
+    dashboard.json
+    invoices.json
+    appliances.json
+    laboratory.json
+    diagnostics.json
+    savings.json
+    settings.json
+```
+
+Repite la estructura para cada idioma.
+
+Implementa:
+
+- Variables interpoladas.
+- Plurales.
+- Fechas localizadas.
+- Formato numérico.
+- Formato monetario.
+- Mensajes de validación.
+- Traducción de unidades textuales.
+- Idioma predeterminado.
+- Idioma de respaldo.
+
+No traduzcas nombres de marcas, modelos o nombres propios de manera automática.
+
+### 9.3. Uso de Google Translate
+
+Quiero que VATIO tenga una función de traducción accesible.
+
+Importante: diferencia la traducción de la interfaz de la traducción de contenido.
+
+La interfaz debe utilizar traducciones locales y verificables mediante archivos de idioma. No debe depender de Google Translate para que los botones, menús y funciones funcionen.
+
+Además, incorpora una herramienta:
+
+**«Traducir texto con Google Translate».**
+
+Debe permitir:
+
+- Introducir o pegar texto.
+- Seleccionar idioma de origen.
+- Seleccionar idioma de destino.
+- Copiar el texto.
+- Abrir Google Translate con el texto y los idiomas seleccionados.
+- Regresar a VATIO sin perder los datos.
+
+Utiliza la dirección web pública de Google Translate de forma segura, codificando correctamente los parámetros.
+
+No incrustes Google Translate dentro de un iframe ni construyas una integración falsa.
+
+No utilices Google Cloud Translation API ni servicios de pago sin autorización y configuración explícita.
+
+Deja preparado un adaptador para una futura integración con un proveedor profesional de traducción.
+
+Si no hay Internet, la interfaz localizada seguirá funcionando.
+
+### 9.4. Escritura de derecha a izquierda
+
+Implementa compatibilidad con idiomas RTL, especialmente árabe.
+
+Cuando se seleccione un idioma RTL:
+
+- Cambia la dirección de diseño.
+- Adapta la navegación.
+- Adapta formularios.
+- Adapta tablas.
+- Adapta iconos direccionales cuando corresponda.
+- Adapta alineación.
+- Adapta diálogos.
+
+No inviertas arbitrariamente iconos que no deban invertirse.
+
+### 9.5. Selector de países
+
+Crea un selector internacional de países.
+
+Debe permitir buscar por:
+
+- Nombre.
+- Código de país.
+- Región geográfica.
+
+El perfil energético debe guardar:
+
+- País.
+- Región.
+- Ciudad.
+- Distribuidora.
+- Categoría de usuario.
+- Moneda.
+- Zona horaria.
+- Idioma.
+- Unidades.
+
+No confundas localización con conversión monetaria.
+
+Cambiar la moneda mostrada no implica que se haya convertido el importe económico.
+
+Cuando no exista una tarifa verificada para un país, permite al usuario configurar una tarifa propia.
+
+No inventes tarifas internacionales.
+
+### 9.6. Localización de formatos
+
+Utiliza Intl.NumberFormat y mecanismos estándar equivalentes para:
+
+- Monedas.
+- Decimales.
+- Separadores de miles.
+- Porcentajes.
+- Fechas.
+- Horas.
+- Unidades.
+
+No codifiques formatos nacionales directamente en los componentes.
+
+---
+
+# PARTE V. REDISEÑO DE TODAS LAS SECCIONES
+
+## 10. MI ENERGÍA — NUEVO DASHBOARD PREMIUM
+
+Esta sección debe convertirse en la pantalla más atractiva de VATIO.
+
+No mantengas el diseño actual con una tarjeta gigantesca y un área vacía.
+
+Quiero un dashboard organizado mediante una composición tipo BENTO GRID.
+
+Utiliza tarjetas de distintas proporciones y una jerarquía visual bien planificada.
+
+### 10.1. Cabecera del dashboard
+
+Diseña una cabecera con:
+
+- Nombre del hogar.
+- Ubicación.
+- Periodo seleccionado.
+- Estado energético.
+- Botón de registrar factura.
+- Botón de añadir aparato.
+- Menú de acciones rápidas.
+
+Utiliza una superficie azul nocturno con iluminación verde muy sutil.
+
+No hagas que la cabecera ocupe excesiva altura.
+
+### 10.2. Indicadores principales
+
+Crear cuatro tarjetas KPI:
+
+**Gasto del periodo**
+- Importe.
+- Variación.
+- Periodo.
+- Fuente del dato.
+
+**Consumo**
+- kWh.
+- Variación.
+- Promedio diario.
+
+**Costo medio**
+- Costo por kWh.
+- Tipo de tarifa.
+- Advertencia si la tarifa no está verificada.
+
+**Ahorro potencial**
+- Importe mensual estimado.
+- Oportunidades encontradas.
+
+Estas tarjetas deben funcionar en ausencia de registros sin mostrar valores ficticios.
+
+### 10.3. Gráfico principal
+
+Crear un gráfico amplio y elegante.
+
+Mostrar consumo y gasto por periodo.
+
+Incluir:
+
+- Selector de rango temporal.
+- Leyendas interactivas.
+- Tooltip detallado.
+- Comparación histórica.
+- Cambios de escala.
+- Información accesible.
+- Exportación de datos.
+
+No debe haber gráficos decorativos sin datos.
+
+### 10.4. Distribución del consumo
+
+Incorpora una tarjeta con gráfico circular o de barras.
+
+Debe mostrar la distribución estimada por categoría de aparatos cuando exista inventario.
+
+### 10.5. Comparación mensual
+
+Tarjeta con:
+
+- Consumo anterior.
+- Consumo actual.
+- Variación.
+- Costo anterior.
+- Costo actual.
+- Variación económica.
+
+### 10.6. Actividad reciente
+
+Tarjeta compacta con registros reales.
+
+Cada elemento debe abrir su registro.
+
+### 10.7. Oportunidades de ahorro
+
+Tarjeta con las tres oportunidades más relevantes.
+
+Mostrar el ahorro potencial calculado y su nivel de confianza.
+
+### 10.8. Personalización del dashboard
+
+Incluye:
+
+- Botón para reorganizar widgets.
+- Mostrar u ocultar tarjetas.
+- Restaurar distribución original.
+- Selector de periodo.
+- Actualizar información.
+- Exportar resumen.
+
+Guarda la configuración del dashboard localmente.
+
+No permita que la reorganización rompa la visualización móvil.
+
+---
+
+## 11. FACTURAS — CENTRO DE ANÁLISIS DOCUMENTAL
+
+Rediseña toda esta sección.
+
+La pantalla debe sentirse como una herramienta financiera profesional.
+
+### Vista principal
+
+Incluir:
+
+- Total de facturas.
+- Gasto acumulado.
+- Consumo acumulado.
+- Última factura.
+- Evolución histórica.
+
+### Tabla de facturas
+
+Diseña una tabla moderna con:
+
+- Periodo.
+- Distribuidora.
+- Consumo.
+- Importe.
+- Tarifa.
+- Estado de verificación.
+- Fecha de registro.
+- Acciones.
+
+Incorpora:
+
+- Búsqueda.
+- Filtros.
+- Ordenamiento.
+- Selección múltiple cuando sea útil.
+- Paginación.
+- Selector de densidad.
+- Exportación CSV.
+- Abrir detalle.
+- Editar.
+- Eliminar.
+
+En dispositivos móviles, transforma la tabla en tarjetas compactas.
+
+### Registrar factura
+
+Mejora el proceso mediante un asistente por pasos:
+
+1. Origen de la factura.
+2. Fotografía, PDF o introducción manual.
+3. Datos reconocidos o introducidos.
+4. Revisión.
+5. Auditoría.
+6. Confirmación y almacenamiento.
+
+Los datos OCR no deben ser aceptados sin revisión.
+
+### Vista detallada
+
+Reorganiza cada factura en pestañas:
+
+- Resumen.
+- Desglose.
+- Auditoría.
+- Comparación.
+- Documento original.
+
+Incluye botones para imprimir, exportar, editar, compartir y volver al historial.
+
+No declares que una factura tiene errores sin evidencia matemática.
+
+---
+
+## 12. MIS APARATOS — INVENTARIO ENERGÉTICO
+
+Transforma el inventario actual en un catálogo visual moderno.
+
+### Pantalla principal
+
+Mostrar:
+
+- Número de aparatos activos.
+- Consumo estimado.
+- Costo estimado.
+- Aparatos de mayor consumo.
+
+### Presentación
+
+Ofrece dos vistas:
+
+**Vista de cuadrícula**
+
+Tarjetas visuales con:
+
+- Icono.
+- Nombre.
+- Categoría.
+- Potencia.
+- Consumo mensual.
+- Costo estimado.
+
+**Vista de lista**
+
+Información más compacta y ordenable.
+
+Incluye un control para alternar vistas.
+
+### Filtros
+
+- Categoría.
+- Estado.
+- Consumo.
+- Costo.
+- Potencia.
+- Tipo de dato.
+
+### Funciones
+
+- Añadir aparato.
+- Duplicar.
+- Editar.
+- Archivar.
+- Eliminar.
+- Favoritos.
+- Comparar.
+- Ver ficha detallada.
+
+### Formulario de aparato
+
+No utilices un formulario largo y visualmente intimidante.
+
+Agrupa los campos en:
+
+1. Identificación.
+2. Características eléctricas.
+3. Patrón de utilización.
+4. Estimación.
+5. Confirmación.
+
+Introduce ayudas contextuales para potencia, horas, consumo por ciclo y modo de espera.
+
+### Ficha individual
+
+Diseña un panel con:
+
+- Identificación.
+- Imagen ilustrativa.
+- Potencia.
+- Consumo diario.
+- Consumo mensual.
+- Gasto mensual.
+- Proyección anual.
+- Comparación con otros aparatos.
+- Procedencia de los datos.
+
+Incluye una sección «¿Cómo se calculó?» con fórmula y sustitución numérica.
+
+---
+
+## 13. LABORATORIO — SIMULACIÓN PROFESIONAL
+
+Esta sección debe parecer una herramienta de ingeniería energética, no un formulario ordinario.
+
+### Diseño principal
+
+Organiza la pantalla en dos áreas:
+
+**Panel de variables**
+
+A la izquierda:
+
+- Aparato.
+- Potencia.
+- Horas.
+- Días.
+- Cantidad.
+- Tarifa.
+- Variables específicas.
+
+**Panel de resultados**
+
+A la derecha:
+
+- Consumo actual.
+- Consumo simulado.
+- Costo actual.
+- Costo proyectado.
+- Diferencia.
+- Ahorro potencial.
+
+### Controles
+
+Utiliza:
+
+- Sliders.
+- Campos numéricos.
+- Selectores.
+- Botones de incremento y decremento.
+- Interruptores.
+- Selectores de escenario.
+- Restablecer.
+- Duplicar escenario.
+- Guardar.
+- Comparar.
+
+Los cambios deben actualizar los resultados sin recargar la página.
+
+### Gráficos
+
+Incorpora:
+
+- Consumo frente a horas.
+- Costo frente a consumo.
+- Comparación de escenarios.
+- Ahorro acumulado.
+
+### Escenarios
+
+Diseña tarjetas de escenarios con:
+
+- Nombre.
+- Descripción.
+- Consumo.
+- Costo.
+- Fecha.
+- Diferencia respecto al escenario base.
+
+Permite editar, duplicar, comparar, eliminar y exportar.
+
+### Explicaciones
+
+Añade una sección desplegable con los detalles matemáticos del escenario.
+
+No uses inteligencia artificial para sustituir el cálculo.
+
+---
+
+## 14. DIAGNÓSTICO — CENTRO DE INTELIGENCIA ENERGÉTICA
+
+Quiero una interfaz analítica profesional.
+
+### Panel de resumen
+
+Mostrar:
+
+- Diagnósticos detectados.
+- Alertas pendientes.
+- Inconsistencias.
+- Oportunidades de mejora.
+- Última fecha de análisis.
+
+### Clasificación
+
+Distingue visualmente:
+
+- Información.
+- Observación.
+- Advertencia.
+- Prioridad alta.
+
+No uses rojo para cualquier notificación.
+
+### Listado de diagnósticos
+
+Cada diagnóstico debe aparecer como una tarjeta compacta.
+
+Incluye:
+
+- Nombre.
+- Fecha.
+- Categoría.
+- Gravedad.
+- Evidencia.
+- Nivel de confianza.
+- Estado.
+
+### Vista individual
+
+Al abrir un diagnóstico mostrar:
+
+1. Qué se observó.
+2. Qué datos se analizaron.
+3. Qué fórmula o regla se aplicó.
+4. Qué resultado se obtuvo.
+5. Qué limitaciones existen.
+6. Qué se recomienda revisar.
+
+### Controles
+
+- Actualizar análisis.
+- Filtrar.
+- Ordenar.
+- Marcar revisado.
+- Descartar.
+- Exportar.
+- Ver evidencia.
+- Comparar periodos.
+
+No inventes diagnósticos cuando falten datos.
+
+---
+
+## 15. PLAN DE AHORRO — GESTIÓN DE ACCIONES
+
+Renueva esta sección para que se perciba como una herramienta de gestión de objetivos.
+
+### Panel principal
+
+Mostrar:
+
+- Ahorro potencial.
+- Ahorro observado.
+- Acciones pendientes.
+- Acciones completadas.
+- Inversiones registradas.
+
+### Tarjetas de recomendaciones
+
+Cada tarjeta debe mostrar:
+
+- Acción.
+- Aparato afectado.
+- Ahorro mensual potencial.
+- Ahorro anual potencial.
+- Dificultad.
+- Costo estimado, si se conoce.
+- Confianza de la estimación.
+
+### Priorización
+
+Añade controles para ordenar por:
+
+- Mayor ahorro.
+- Menor inversión.
+- Mayor facilidad.
+- Mayor impacto energético.
+
+### Lista de tareas
+
+Incluye:
+
+- Crear tarea.
+- Marcar completa.
+- Editar.
+- Posponer.
+- Añadir nota.
+- Registrar fecha.
+- Ver evolución.
+
+### Inversiones
+
+Permite registrar compras y comprobar el ahorro posterior.
+
+Incluye el cálculo de recuperación económica y presenta sus supuestos.
+
+No sumes ahorros incompatibles como si fueran independientes.
+
+---
+
+## 16. TARIFAS ELÉCTRICAS — CENTRO INTERNACIONAL DE TARIFAS
+
+Haz que esta sección tenga apariencia de una base técnica profesional.
+
+### Panel principal
+
+Mostrar:
+
+- País seleccionado.
+- Distribuidora.
+- Categoría.
+- Tarifa activa.
+- Vigencia.
+- Fuente.
+- Estado de verificación.
+
+### Tarjetas de tarifas
+
+Presentar:
+
+- Nombre.
+- País.
+- Distribuidora.
+- Precio o estructura tarifaria.
+- Vigencia.
+- Estado documental.
+
+### Acciones
+
+- Añadir tarifa.
+- Editar.
+- Duplicar.
+- Importar JSON.
+- Importar CSV.
+- Exportar.
+- Comparar.
+- Consultar historial.
+- Ver fuente documental.
+
+### Configuración de bloques
+
+Utiliza una interfaz visual para crear y editar bloques marginales e integrales.
+
+Los valores deben ser introducidos y verificados.
+
+### Calculadora tarifaria
+
+Incluye un panel en el que el usuario introduzca kWh y obtenga el desglose.
+
+Los resultados deben actualizarse dinámicamente.
+
+No inventes tarifas vigentes ni presentes estructuras de otros países como si fueran equivalentes.
+
+---
+
+## 17. CALCULADORA Y GLOSARIO
+
+Separa visualmente ambas funciones.
+
+### Calculadora
+
+Crea una calculadora energética profesional con pestañas:
+
+- Potencia.
+- Energía.
+- Consumo.
+- Costo.
+- Conversión.
+- Tiempo de funcionamiento.
+
+Cada operación debe incluir las unidades.
+
+Incluye botones:
+
+- Calcular.
+- Limpiar.
+- Intercambiar unidades.
+- Copiar.
+- Guardar resultado.
+- Ver fórmula.
+
+### Glosario
+
+Rediseña el glosario como una biblioteca técnica.
+
+Incluye:
+
+- Buscador.
+- Categorías.
+- Favoritos.
+- Índice alfabético.
+- Términos recientes.
+
+Las fichas deben contener definición sencilla, definición técnica, unidades, fórmula y ejemplo.
+
+---
+
+## 18. INFORMES Y RESPALDOS
+
+Transforma esta sección en un centro documental.
+
+### Panel
+
+Mostrar:
+
+- Número de informes.
+- Último informe.
+- Respaldos disponibles.
+- Última copia exportada.
+
+### Tipos de informes
+
+- Mensual.
+- Anual.
+- Por factura.
+- Por aparato.
+- Diagnóstico.
+- Eficiencia.
+- Escenarios.
+
+### Generador de informes
+
+Crea un asistente visual:
+
+1. Tipo de informe.
+2. Periodo.
+3. Instalación.
+4. Contenido.
+5. Vista previa.
+6. Exportación.
+
+### Botones
+
+- Generar PDF.
+- Descargar.
+- Imprimir.
+- Compartir.
+- Exportar CSV.
+- Exportar JSON.
+- Crear respaldo.
+- Restaurar respaldo.
+- Eliminar informe.
+
+Los informes deben ser profesionales, con portada sencilla, datos, gráficos, unidades, metodología y fuentes cuando corresponda.
+
+---
+
+# PARTE VI. CENTRO DE CONFIGURACIÓN COMPLETO
+
+## 19. Rediseñar Configuración
+
+Esta sección no debe ser una lista desordenada.
+
+Construye un centro de configuración mediante pestañas o categorías.
+
+### A. Apariencia
+
+- Tema oscuro.
+- Tema claro.
+- Automático.
+- Color de acento.
+- Densidad compacta.
+- Densidad cómoda.
+- Tamaño de texto.
+- Reducir animaciones.
+- Restaurar apariencia.
+
+### B. Idioma y región
+
+- Idioma.
+- País.
+- Región.
+- Ciudad.
+- Moneda.
+- Zona horaria.
+- Formato de fecha.
+- Formato numérico.
+- Sistema de unidades.
+
+### C. Instalación
+
+- Nombre.
+- Tipo.
+- Distribuidora.
+- Tarifa.
+- Características.
+- Ubicación general.
+
+### D. Notificaciones
+
+- Activar o desactivar.
+- Recordatorio de factura.
+- Diagnósticos.
+- Tareas de ahorro.
+- Frecuencia.
+- Horario preferido.
+
+### E. Privacidad y datos
+
+- Exportar información.
+- Crear respaldo.
+- Restaurar.
+- Revisar almacenamiento.
+- Borrar registros.
+- Eliminar instalación.
+
+### F. Accesibilidad
+
+- Tamaño de letra.
+- Contraste aumentado.
+- Reducir movimiento.
+- Etiquetas accesibles.
+- Preferencias de lectura.
+
+### G. Acerca de VATIO
+
+- Versión.
+- Información del producto.
+- Privacidad.
+- Condiciones.
+- Centro de ayuda.
+- Créditos técnicos.
+
+---
+
+# PARTE VII. CATÁLOGO DE CONTROLES Y BOTONES
+
+## 20. Sistema global de botones
+
+Quiero que perfecciones y unifiques absolutamente todos los botones de VATIO.
+
+Crea un sistema de botones con estilos y estados consistentes.
+
+### 20.1. Botón primario
+
+Utilizado para las acciones principales:
+
+- Registrar factura.
+- Añadir aparato.
+- Guardar.
+- Calcular.
+- Crear escenario.
+- Generar informe.
+
+Debe destacar sin ser excesivamente grande.
+
+### 20.2. Botón secundario
+
+Para:
+
+- Cancelar.
+- Volver.
+- Comparar.
+- Ver detalles.
+- Abrir configuración.
+
+### 20.3. Botón de icono
+
+Para:
+
+- Tema.
+- Idioma.
+- Notificaciones.
+- Ayuda.
+- Búsqueda.
+- Menús.
+- Expandir.
+- Contraer.
+- Cerrar.
+
+Debe incluir tooltip y etiqueta accesible.
+
+### 20.4. Botón de peligro
+
+Para acciones destructivas.
+
+Ejemplos:
+
+- Eliminar factura.
+- Borrar instalación.
+- Eliminar respaldo.
+
+Siempre solicita confirmación contextual.
+
+### 20.5. Botones compactos
+
+Para tablas, tarjetas y acciones secundarias.
+
+Evita botones gigantes cuando no sean necesarios.
+
+### 20.6. Interruptores
+
+Para:
+
+- Activar o desactivar aparatos.
+- Mostrar u ocultar gráficos.
+- Activar notificaciones.
+- Configurar funciones.
+- Seleccionar preferencias.
+
+### 20.7. Controles de selección
+
+Implementa:
+
+- Selectores.
+- Segmentados.
+- Pestañas.
+- Desplegables.
+- Selectores de fecha.
+- Selectores de rango.
+- Controles de cantidad.
+- Sliders.
+
+Todos deben tener estados normales, hover, focus, activos, deshabilitados y error.
+
+### 20.8. Botones adicionales de utilidad
+
+Incorpora cuando correspondan:
+
+- Buscar.
+- Filtrar.
+- Ordenar.
+- Limpiar filtros.
+- Actualizar.
+- Copiar.
+- Compartir.
+- Descargar.
+- Imprimir.
+- Exportar.
+- Favorito.
+- Duplicar.
+- Archivar.
+- Mostrar información.
+- Ver fórmula.
+- Ver fuente.
+- Restaurar.
+- Deshacer cuando sea posible.
+
+No añadas controles que no tengan una acción implementada.
+
+No coloques todas las acciones simultáneamente en cada pantalla. Utiliza menús contextuales de tres puntos cuando sea apropiado.
+
+---
+
+# PARTE VIII. COMPONENTES DE COMODIDAD Y PRODUCTIVIDAD
+
+## 21. Elementos adicionales de interfaz
+
+Implementa los siguientes componentes cuando aporten valor.
+
+### 21.1. Buscador global
+
+Un botón de búsqueda permanente.
+
+Permite navegar rápidamente entre registros y secciones.
+
+### 21.2. Centro de acciones rápidas
+
+Un menú accesible desde un botón flotante o desde el encabezado.
+
+Acciones:
+
+- Registrar factura.
+- Añadir aparato.
+- Calcular consumo.
+- Simular ahorro.
+- Crear diagnóstico.
+- Generar informe.
+
+No tapes información importante con el botón flotante.
+
+### 21.3. Tooltips
+
+Explica:
+
+- Significado de un indicador.
+- Una unidad.
+- Un botón.
+- Una fórmula.
+- El origen de una cifra.
+
+### 21.4. Ventanas emergentes
+
+Diseña modales profesionales para:
+
+- Confirmaciones.
+- Formularios pequeños.
+- Explicaciones.
+- Selecciones.
+- Opciones avanzadas.
+
+No utilices alert() o confirm() del navegador para las interacciones normales.
+
+### 21.5. Panel lateral contextual
+
+Cuando se abra un registro, permite mostrar información detallada en un panel lateral en escritorio.
+
+En móvil, conviértelo en pantalla o panel adecuado.
+
+### 21.6. Atajos de teclado
+
+Implementa cuando corresponda:
+
+- Ctrl + K: búsqueda.
+- Ctrl + N: nueva factura cuando sea apropiado.
+- Escape: cerrar diálogo.
+- Enter: confirmar formularios válidos.
+- Tab: navegación accesible.
+
+Evita interferir con los controles de escritura.
+
+### 21.7. Sistema de mensajes
+
+Crea mensajes toast para:
+
+- Guardado correcto.
+- Exportación.
+- Error.
+- Advertencia.
+- Copiado.
+- Actualización.
+
+Los mensajes deben ser discretos y desaparecer cuando corresponda, con posibilidad de cerrarlos manualmente.
+
+No ocultes errores importantes en mensajes que desaparecen inmediatamente.
+
+### 21.8. Skeleton loading
+
+Implementa marcadores de carga para tarjetas, tablas y gráficos cuando sea necesario.
+
+No utilices pantallas vacías durante la recuperación de datos.
+
+### 21.9. Panel de ayuda contextual
+
+Cada módulo debe tener un botón de ayuda que explique su funcionamiento sin abandonar innecesariamente la pantalla.
+
+---
+
+# PARTE IX. REDISEÑO VISUAL DE CADA COMPONENTE
+
+## 22. Gráficos
+
+Quiero gráficos que parezcan los de un producto de análisis energético profesional.
+
+Utiliza el sistema de gráficos existente cuando sea posible.
+
+Perfecciona:
+
+- Ejes.
+- Leyendas.
+- Etiquetas.
+- Tipografía.
+- Tooltips.
+- Cuadrículas.
+- Selección.
+- Colores.
+- Transiciones.
+- Responsividad.
+
+Crea una identidad visual para cada tipo:
+
+- Consumo.
+- Dinero.
+- Ahorro.
+- Comparación.
+- Distribución.
+- Predicción.
+
+No utilices colores arbitrarios en cada módulo.
+
+Los gráficos deben conservar su legibilidad en ambos temas.
+
+No inventes series para llenar espacios vacíos.
+
+### Gráficos avanzados
+
+Cuando resulte útil:
+
+- Gráfico de líneas.
+- Barras verticales.
+- Barras horizontales.
+- Gráfico circular.
+- Área acumulada.
+- Comparación superpuesta.
+- Indicadores de progreso.
+- Medidores circulares.
+
+No conviertas cada cifra en un gráfico. Utiliza cada visualización cuando facilite comprender la información.
+
+## 23. Tablas
+
+Todas las tablas deben tener:
+
+- Encabezados claros.
+- Ordenamiento.
+- Filtros.
+- Estados de selección.
+- Acciones.
+- Separadores sutiles.
+- Paginación cuando corresponda.
+
+En móvil, nunca obligues a visualizar tablas de escritorio en un espacio insuficiente.
+
+Transforma las filas en tarjetas o vistas apropiadas.
+
+## 24. Formularios
+
+Todos los formularios deben tener un lenguaje visual coherente.
+
+Incluye:
+
+- Etiquetas.
+- Placeholder.
+- Texto de ayuda.
+- Validaciones.
+- Estados de error.
+- Estados de éxito.
+- Campos obligatorios identificados.
+- Unidades.
+
+Agrupa campos relacionados.
+
+Mantén los datos introducidos cuando el usuario cierre accidentalmente un diálogo y vuelva a abrirlo, siempre que no haya cancelado explícitamente la operación.
+
+## 25. Estados vacíos
+
+Rediseña todos los estados vacíos.
+
+Ejemplos:
+
+- Sin facturas.
+- Sin aparatos.
+- Sin escenarios.
+- Sin diagnósticos.
+- Sin notificaciones.
+- Sin informes.
+- Sin tarifas.
+
+Cada estado debe ofrecer una acción útil.
+
+No utilices la misma ilustración y el mismo texto en todas las pantallas.
+
+## 26. Responsive design completo
+
+Optimiza específicamente las siguientes dimensiones:
+
+- 360 píxeles de ancho.
+- 390 píxeles de ancho.
+- 430 píxeles de ancho.
+- 768 píxeles.
+- 1024 píxeles.
+- 1440 píxeles.
+- 1920 píxeles.
+
+Escritorio:
+
+- Sidebar.
+- Header.
+- Dashboard multicolumna.
+- Paneles de información.
+
+Tablet:
+
+- Sidebar adaptable.
+- Grillas reducidas.
+- Controles accesibles.
+
+Móvil:
+
+- Navegación inferior o menú adecuado.
+- Tarjetas verticales.
+- Botones táctiles.
+- Formularios optimizados.
+- Gráficos adaptables.
+- Diálogos ajustados al viewport.
+
+Comprueba que ningún contenido quede cortado.
+
+---
+
+# PARTE X. FUNCIONAMIENTO Y CONSERVACIÓN DEL PROYECTO
+
+## 27. Inspección obligatoria antes de modificar
+
+Antes de hacer cambios:
+
+1. Inspecciona todos los archivos del proyecto.
+2. Identifica el framework y las dependencias.
+3. Identifica las rutas existentes.
+4. Identifica los componentes.
+5. Identifica los módulos funcionales.
+6. Identifica cómo se guardan los datos.
+7. Identifica los formularios.
+8. Identifica el motor matemático.
+9. Identifica los componentes todavía incompletos.
+10. Comprueba si existe un sistema de temas o traducciones.
+
+No presupongas que algo no existe únicamente porque no aparece en la captura.
+
+Realiza una auditoría real.
+
+### 27.1. Conservación obligatoria
+
+No elimines:
+
+- Registros.
+- Facturas.
+- Aparatos.
+- Tarifas.
+- Escenarios.
+- Diagnósticos.
+- Preferencias.
+- Funciones que ya operen correctamente.
+
+No cambies arbitrariamente el modelo de datos.
+
+No renombres rutas sin actualizar todas sus dependencias.
+
+No sustituyas el motor matemático por datos visuales.
+
+No recrees un módulo que ya existe y funciona.
+
+Si es necesario modificar componentes, conserva su comportamiento.
+
+### 27.2. Primero diseño, pero sin romper funcionalidad
+
+La renovación visual debe ser integral.
+
+Sin embargo, cada cambio debe conservar las operaciones.
+
+Por ejemplo:
+
+- Cambiar un botón no debe romper su función.
+- Cambiar una tarjeta no debe perder sus datos.
+- Cambiar un gráfico no debe alterar su cálculo.
+- Cambiar el idioma no debe borrar registros.
+- Cambiar el tema no debe recargar la aplicación.
+- Cambiar el país no debe transformar indebidamente importes históricos.
+
+### 27.3. Componentes reutilizables
+
+Construye un sistema de diseño compartido.
+
+No crees estilos independientes e incompatibles para cada módulo.
+
+Todos deben compartir:
+
+- Tipografía.
+- Colores.
+- Espaciado.
+- Botones.
+- Formularios.
+- Tarjetas.
+- Iconos.
+- Diálogos.
+- Estados.
+- Navegación.
+
+---
+
+# PARTE XI. RENDIMIENTO Y EXPERIENCIA DE USO
+
+## 28. Optimización
+
+La aplicación debe sentirse rápida.
+
+Implementa:
+
+- Renderizado eficiente.
+- Componentes reutilizables.
+- Carga diferida de módulos pesados cuando aporte valor.
+- Gráficos optimizados.
+- Imágenes optimizadas.
+- Persistencia eficiente.
+- Evitar renderizados innecesarios.
+
+No agregues bibliotecas grandes solamente para una animación pequeña.
+
+No hagas llamadas de red para actualizar datos almacenados localmente.
+
+## 29. Accesibilidad
+
+Implementa:
+
+- Navegación por teclado.
+- Contraste suficiente.
+- Focus visible.
+- Etiquetas ARIA.
+- Compatibilidad con lectores de pantalla.
+- Tamaño táctil adecuado.
+- Reducción de movimiento.
+- Escalado de texto.
+- Etiquetas descriptivas de gráficos.
+
+No dependas exclusivamente de colores para comunicar estados.
+
+## 30. Compatibilidad Android
+
+Mantén la compatibilidad con Capacitor.
+
+Presta especial atención a:
+
+- Safe areas.
+- Barra de estado.
+- Barra de navegación.
+- Orientación.
+- Botón atrás de Android.
+- Cámara.
+- Selección de archivos.
+- Teclado virtual.
+- Ventanas emergentes.
+- Navegación táctil.
+- Persistencia.
+
+No introduzcas funcionalidades dependientes exclusivamente de APIs de escritorio.
+
+---
+
+# PARTE XII. VERIFICACIÓN DE FUNCIONAMIENTO
+
+## 31. Pruebas de cada interacción
+
+No acepto botones que solamente parezcan funcionales.
+
+Comprueba:
+
+- Botón de tema.
+- Selector de idioma.
+- Selector de país.
+- Búsqueda.
+- Filtros.
+- Ordenamiento.
+- Menú lateral.
+- Botones de añadir.
+- Botones de guardar.
+- Botones de cancelar.
+- Modales.
+- Selectores.
+- Sliders.
+- Exportaciones.
+- Notificaciones.
+- Ayuda contextual.
+- Atajos de teclado.
+
+Cada control debe producir la acción que anuncia.
+
+### 31.1. Pruebas de tema
+
+Verifica que al pasar de claro a oscuro y regresar:
+
+- Todos los módulos cambien.
+- Todos los diálogos cambien.
+- Los gráficos sigan siendo legibles.
+- Las tablas sigan siendo legibles.
+- Los formularios se adapten.
+- El tema permanezca después de reiniciar.
+
+### 31.2. Pruebas de idiomas
+
+Comprueba:
+
+- Cambios reales de idioma.
+- Ningún texto importante permanece accidentalmente en otro idioma.
+- Los plurales funcionan.
+- Las fechas cambian correctamente.
+- Los importes se formatean según la configuración regional.
+- Los idiomas RTL funcionan.
+- El idioma elegido permanece después de reiniciar.
+
+### 31.3. Pruebas de navegación
+
+Comprueba que todos los módulos puedan abrirse, cerrarse y recuperarse correctamente.
+
+No permitas rutas rotas.
+
+### 31.4. Pruebas de persistencia
+
+Comprueba que la personalización visual no afecte a la información energética.
+
+---
+
+# PARTE XIII. ORDEN DE IMPLEMENTACIÓN
+
+## 32. Ejecuta el trabajo en este orden
+
+### FASE A — Auditoría y preparación
+
+Inspeccionar el proyecto, identificar los componentes y preparar una estrategia de actualización sin destrucción de funcionalidades.
+
+### FASE B — Sistema visual global
+
+Crear:
+
+- Design tokens.
+- Paleta.
+- Tipografía.
+- Componentes.
+- Botones.
+- Tarjetas.
+- Formularios.
+- Diálogos.
+- Tooltips.
+- Estados.
+- Iconografía.
+
+### FASE C — Nueva estructura
+
+Rediseñar:
+
+- Sidebar.
+- Header.
+- Navegación.
+- Breadcrumbs.
+- Búsqueda global.
+- Acciones rápidas.
+
+### FASE D — Temas
+
+Implementar por completo:
+
+- Dark.
+- Light.
+- System.
+- Persistencia.
+
+### FASE E — Idiomas y regiones
+
+Implementar el sistema de internacionalización y los selectores.
+
+Preparar todas las secciones para las traducciones.
+
+### FASE F — Dashboard
+
+Renovar Mi energía con una composición profesional y totalmente funcional.
+
+### FASE G — Renovación de módulos
+
+Rediseñar individualmente:
+
+- Facturas.
+- Aparatos.
+- Laboratorio.
+- Diagnóstico.
+- Plan de ahorro.
+- Tarifas.
+- Calculadora.
+- Glosario.
+- Informes.
+- Configuración.
+
+No dejes ninguna sección con el diseño anterior.
+
+### FASE H — Controles y comodidad
+
+Implementar el catálogo de botones, acciones rápidas, filtros, búsqueda, notificaciones, tooltips y paneles.
+
+### FASE I — Responsive y Android
+
+Adaptar y probar los diferentes tamaños y la experiencia móvil.
+
+### FASE J — Control de calidad
+
+Ejecutar las pruebas, corregir errores visuales, funcionales y técnicos.
+
+---
+
+# PARTE XIV. CRITERIO DE CALIDAD FINAL
+
+## 33. Qué espero ver al terminar
+
+Quiero que la pantalla inicial de VATIO produzca una impresión completamente diferente a la actual.
+
+No quiero:
+
+- Grandes tarjetas vacías.
+- Mucho blanco sin propósito.
+- Interfaces genéricas.
+- Gráficos de aspecto predeterminado.
+- Botones desproporcionados.
+- Menús sin jerarquía.
+- Formularios sin organización.
+- Pantallas idénticas en todas las secciones.
+- Controles que no hacen nada.
+
+Quiero:
+
+- Una aplicación tecnológicamente sofisticada.
+- Dashboard tipo Bento.
+- Tarjetas KPI bien proporcionadas.
+- Gráficos elegantes.
+- Navegación excelente.
+- Modo oscuro premium.
+- Modo claro igualmente refinado.
+- Cambio de idioma real.
+- Configuración internacional.
+- Componentes reutilizables.
+- Transiciones sutiles.
+- Interacciones completas.
+- Experiencia móvil excelente.
+- Cada módulo con personalidad visual propia, pero manteniendo la misma identidad de VATIO.
+
+## 34. Instrucción final
+
+No te limites a decirme qué deberías modificar.
+
+No me entregues una lista de recomendaciones.
+
+No generes solamente una propuesta visual.
+
+**MODIFICA DIRECTAMENTE EL PROYECTO EXISTENTE E IMPLEMENTA EL REDISEÑO.**
+
+Trabaja sobre los archivos reales.
+
+Conserva las funcionalidades y los datos.
+
+Construye los componentes reales.
+
+Conecta cada botón con su acción.
+
+Prueba los resultados.
+
+Corrige todos los errores que aparezcan.
+
+Si alguna función ya está terminada, no la reconstruyas innecesariamente.
+
+Si alguna función es solamente visual, impleméntala.
+
+Si algún elemento depende de una integración externa que todavía no existe, prepara una solución honesta y deja documentado lo pendiente.
+
+Si no puedes completar una fase por limitaciones de ejecución, conserva todo el trabajo anterior y continúa desde el último punto alcanzado; no reduzcas el proyecto ni sustituyas módulos funcionales.
+
+Al concluir, proporciona un informe técnico con:
+
+1. Componentes renovados.
+2. Secciones rediseñadas.
+3. Funciones nuevas.
+4. Idiomas implementados.
+5. Temas implementados.
+6. Botones y controles funcionales.
+7. Mejoras de usabilidad.
+8. Pruebas realizadas.
+9. Errores encontrados y corregidos.
+10. Funcionalidades pendientes.
+
+**El estándar es el de una aplicación comercial profesional, no el de un prototipo generado por inteligencia artificial.**
+
+Comienza ahora la transformación integral de VATIO.

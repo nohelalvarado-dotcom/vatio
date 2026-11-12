@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* Prompt 02 Refined Light Palette */
+    --color-bg: #F3F6FA;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #F7F9FC;
+    --color-surface-elevated: #FFFFFF;
+    --color-border: #E4EAF1;
+    --color-border-subtle: #EDF2F7;
+    --color-text-main: #172438;
+    --color-text-muted: #64758B;
+    --color-primary: #079D70;
+    --color-primary-hover: #06825c;
+    --color-secondary: #13B981;
+    --color-accent-cyan: #079FB5;
+    --color-warning: #A86B10;
+    --color-warning-bg: #FEF3C7;
+    --color-error: #C94343;
+    --color-error-bg: #FEE2E2;
+  }
+
+  .dark {
+    /* Prompt 02 Deep Tech Dark Palette */
+    --color-bg: #0B1220;
+    --color-surface: #141F32;
+    --color-surface-subtle: #19273B;
+    --color-surface-elevated: #24364D;
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-subtle: rgba(255, 255, 255, 0.04);
+    --color-text-main: #F2F6FC;
+    --color-text-muted: #A7B6CA;
+    --color-primary: #35D39A;
+    --color-primary-hover: #45e3aa;
+    --color-secondary: #21B985;
+    --color-accent-cyan: #42C7D9;
+    --color-warning: #F1B653;
+    --color-warning-bg: rgba(241, 182, 83, 0.12);
+    --color-error: #F07676;
+    --color-error-bg: rgba(240, 118, 118, 0.12);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Tabular numbers for calculations and financial metrics */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* RTL Support utility styles */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+/* ============================================================
+   VATIO · Modos de plataforma
+   ------------------------------------------------------------
+   El <html> recibe una clase según cómo se ejecuta la app:
+     .mode-native-phone → SOLO interfaz móvil (app de Play Store)
+     .mode-web-phone    → web en un teléfono real (responsive)
+     .mode-web-desktop  → SOLO interfaz de escritorio
+   Regla clave: cada modo muestra ÚNICAMENTE su propia interfaz,
+   nunca ambas ni la opuesta.
+   ============================================================ */
+
+/* 1) App nativa (Play Store): únicamente la interfaz móvil.
+      Oculta cualquier componente marcado como desktop-only. */
+html.mode-native-phone .desktop-only {
+  display: none !important;
+}
+
+/* 1b) Nota: la previsualización móvil usa un iframe real de 390px,
+      así que el responsive funciona con el ancho real del teléfono
+      (igual que en AI Studio). No se necesitan hacks aquí. */
+
+/* 2) Escritorio: únicamente la interfaz de escritorio.
+      Oculta cualquier componente marcado como mobile-only. */
+html.mode-web-desktop .mobile-only {
+  display: none !important;
+}
+
+/* 3) Contenedor de previsualización tipo teléfono (solo desarrollo,
+      se activa con ?preview=phone o el botón flotante). */
+.phone-preview-shell {
+  background: #05070d;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.phone-preview-frame {
+  width: 390px;
+  height: min(844px, calc(100vh - 48px));
+  border-radius: 2.5rem;
+  border: 10px solid #10151f;
+  outline: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  background: #0b1220;
+}
+
+.phone-preview-frame > * {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}

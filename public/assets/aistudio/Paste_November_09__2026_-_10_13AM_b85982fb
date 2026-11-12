@@ -1,0 +1,2538 @@
+# PROMPT MAESTRO DE DESARROLLO — VATIO
+## Plataforma inteligente de análisis, diagnóstico, control y optimización del consumo eléctrico
+
+**Instrucción principal:** construye una aplicación de software real, completa, funcional y profesional denominada VATIO. No construyas únicamente un prototipo visual, una landing page, una demostración conceptual ni una colección de pantallas desconectadas. Necesito una aplicación funcional, con lógica de negocio, persistencia de datos, cálculos verificables, navegación real y arquitectura preparada para crecer.
+
+---
+
+# PARTE I. IDENTIDAD, PROPÓSITO Y FILOSOFÍA DEL PRODUCTO
+
+## 1. Identidad del proyecto
+
+Nombre comercial: VATIO.
+
+Categoría: gestión energética, análisis de electricidad, eficiencia energética y herramientas de diagnóstico doméstico y comercial.
+
+Eslogan principal:
+
+**«Comprende tu energía. Controla tu consumo. Reduce tus gastos».**
+
+VATIO debe ser una plataforma tecnológica que permita a cualquier persona comprender cuánto consume de electricidad, cuánto paga, por qué paga esa cantidad y qué puede hacer para reducir el gasto.
+
+No es un simple contador de electricidad ni una calculadora de electrodomésticos.
+
+Es una herramienta de análisis energético personal.
+
+Su público objetivo comprende:
+
+- Personas que desean reducir sus facturas eléctricas.
+- Propietarios de viviendas.
+- Familias.
+- Estudiantes de ingeniería y ciencias.
+- Propietarios de pequeños comercios.
+- Profesionales interesados en eficiencia energética.
+- Personas que desean conocer el costo de funcionamiento de sus aparatos.
+- Usuarios que necesitan comprobar matemáticamente sus facturas.
+- Personas interesadas en evaluar inversiones para reducir el consumo.
+
+La aplicación debe comenzar enfocada en hogares, pero su arquitectura debe permitir incorporar posteriormente pequeños negocios, oficinas, talleres y establecimientos comerciales.
+
+## 2. Principios fundamentales
+
+La aplicación debe cumplir estos principios en todas sus secciones:
+
+**Rigor matemático.** Cada cálculo debe tener una fórmula identificable, entradas verificables y resultados reproducibles.
+
+**Transparencia.** El usuario debe poder conocer cómo se obtuvo cualquier cifra.
+
+**Honestidad sobre la precisión.** VATIO debe distinguir entre consumo medido, información declarada, cálculo matemático, estimación y predicción.
+
+**Independencia.** Las funciones principales no deben depender de servicios de inteligencia artificial de pago, APIs externas ni suscripciones a servicios de terceros.
+
+**Privacidad.** La información de las facturas y los hábitos domésticos debe permanecer localmente en el dispositivo durante la primera versión.
+
+**Utilidad.** Cada sección debe resolver una necesidad concreta.
+
+**Simplicidad de uso.** Una persona sin formación técnica debe poder utilizar la aplicación, pero los cálculos también deben satisfacer a un usuario con conocimientos de ingeniería.
+
+**Ampliación internacional.** La arquitectura debe permitir incorporar países, monedas, empresas distribuidoras y estructuras tarifarias diferentes sin reconstruir la aplicación.
+
+## 3. Qué NO debe ser VATIO
+
+No conviertas VATIO en un chatbot genérico.
+
+No incluyas una conversación artificial como núcleo del producto.
+
+No inventes estadísticas.
+
+No inventes tarifas eléctricas.
+
+No muestres estimaciones como si fueran mediciones reales.
+
+No hagas que los cálculos dependan de Gemini.
+
+No añadas conexiones a Firebase, Supabase, OpenAI, bases de datos de pago o servicios externos sin necesidad.
+
+No coloques anuncios dentro de la experiencia principal.
+
+No construyas botones que solamente produzcan animaciones o mensajes de demostración.
+
+No utilices información ficticia para simular que el usuario posee facturas, electrodomésticos o historial.
+
+La aplicación debe presentar estados vacíos informativos cuando todavía no existan datos.
+
+---
+
+# PARTE II. ARQUITECTURA Y TECNOLOGÍA
+
+## 4. Arquitectura tecnológica obligatoria
+
+Construye VATIO como una aplicación web moderna preparada para convertirse en una aplicación Android.
+
+Tecnologías:
+
+- React.
+- TypeScript.
+- CSS moderno.
+- Componentes reutilizables.
+- Arquitectura modular.
+- IndexedDB para persistencia local.
+- Capacitor como puente futuro hacia Android.
+- Herramientas gráficas ligeras para las visualizaciones.
+- Operaciones matemáticas independientes de la interfaz.
+
+Usa las tecnologías que ya proporcione el entorno de Google AI Studio siempre que sean compatibles con esta arquitectura.
+
+La primera versión debe funcionar localmente sin necesitar un servidor propio.
+
+No es necesario construir autenticación, perfiles de usuario en la nube o sincronización durante el MVP.
+
+La aplicación debe poder abrirse, utilizarse y conservar sus datos sin iniciar sesión.
+
+### 4.1. Estructura del código
+
+Organiza el proyecto en módulos claramente separados.
+
+Estructura de referencia:
+
+```text
+vatio/
+│
+├── public/
+│   ├── icons/
+│   ├── illustrations/
+│   └── manifest.json
+│
+├── src/
+│   ├── app/
+│   │   ├── App.tsx
+│   │   ├── router.tsx
+│   │   └── navigation.ts
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── charts/
+│   │   ├── forms/
+│   │   ├── dialogs/
+│   │   ├── cards/
+│   │   └── feedback/
+│   │
+│   ├── modules/
+│   │   ├── dashboard/
+│   │   ├── invoices/
+│   │   ├── appliances/
+│   │   ├── simulator/
+│   │   ├── diagnostics/
+│   │   ├── savings/
+│   │   ├── tariffs/
+│   │   ├── reports/
+│   │   └── settings/
+│   │
+│   ├── core/
+│   │   ├── calculations/
+│   │   ├── tariff-engine/
+│   │   ├── forecasting/
+│   │   ├── diagnostics/
+│   │   ├── validators/
+│   │   └── units/
+│   │
+│   ├── database/
+│   │   ├── db.ts
+│   │   ├── schema.ts
+│   │   ├── migrations.ts
+│   │   └── repositories/
+│   │
+│   ├── services/
+│   │   ├── invoice-service.ts
+│   │   ├── appliance-service.ts
+│   │   ├── tariff-service.ts
+│   │   ├── backup-service.ts
+│   │   ├── export-service.ts
+│   │   └── ocr/
+│   │
+│   ├── types/
+│   │   ├── invoice.ts
+│   │   ├── appliance.ts
+│   │   ├── tariff.ts
+│   │   ├── household.ts
+│   │   ├── scenario.ts
+│   │   └── report.ts
+│   │
+│   ├── hooks/
+│   ├── utils/
+│   ├── styles/
+│   └── tests/
+│
+├── capacitor.config.ts
+├── package.json
+└── README.md
+```
+
+Puedes adaptar esta estructura a las convenciones del proyecto, pero mantén la separación entre interfaz, almacenamiento, cálculos y servicios.
+
+No introduzcas toda la lógica dentro de App.tsx.
+
+### 4.2. Motor matemático independiente
+
+Todas las operaciones energéticas deben ejecutarse en un módulo independiente de React.
+
+La interfaz únicamente envía datos al motor y presenta los resultados.
+
+Ejemplo conceptual:
+
+```typescript
+calculateEnergy()
+calculateEnergyCost()
+calculateTariff()
+calculateInvoice()
+compareInvoices()
+calculateApplianceConsumption()
+simulateSavings()
+detectAnomalies()
+forecastConsumption()
+```
+
+Cada función debe recibir parámetros explícitos y devolver resultados estructurados.
+
+No mezcles cálculos con componentes visuales.
+
+Implementa validaciones y pruebas unitarias para cada función importante.
+
+### 4.3. Almacenamiento
+
+Utiliza IndexedDB con una capa de abstracción y repositorios.
+
+La persistencia debe permitir:
+
+- Crear registros.
+- Editarlos.
+- Eliminarlos.
+- Recuperarlos después de cerrar la aplicación.
+- Mantener relaciones entre facturas y hogares.
+- Conservar el historial.
+- Gestionar versiones de los datos.
+- Migrar el esquema sin perder registros.
+
+No utilices localStorage como almacenamiento principal.
+
+Diseña un adaptador de almacenamiento para que, posteriormente, pueda sustituirse o complementarse con SQLite nativo en Android.
+
+### 4.4. Funcionamiento sin conexión
+
+El núcleo de VATIO debe funcionar sin Internet.
+
+Implementa:
+
+- Recursos estáticos locales.
+- Datos persistentes locales.
+- Cálculos locales.
+- Catálogo de electrodomésticos local.
+- Tarifas importadas y almacenadas localmente.
+- Historial local.
+- Informes generados en el dispositivo.
+
+No muestres errores de conexión en funciones que no necesitan conexión.
+
+---
+
+# PARTE III. DISEÑO E IDENTIDAD VISUAL
+
+## 5. Dirección artística
+
+Quiero un diseño de alta calidad, comparable con aplicaciones comerciales profesionales de finanzas, tecnología y administración energética.
+
+La estética debe transmitir:
+
+- Precisión.
+- Inteligencia.
+- Confianza.
+- Elegancia.
+- Tecnología.
+- Claridad.
+- Profesionalidad.
+
+No quiero una interfaz infantil, recargada, genérica o con apariencia de proyecto escolar.
+
+### 5.1. Identidad cromática
+
+Diseña una identidad visual propia.
+
+Paleta recomendada:
+
+- Azul noche: #111C2C.
+- Azul profundo: #192B40.
+- Verde energético: #31B77A.
+- Cian tecnológico: #37BDD0.
+- Blanco cálido: #F7F9FC.
+- Gris de superficie: #EDF1F5.
+- Gris tipográfico: #657386.
+- Ámbar de advertencia: #EBAA44.
+- Rojo de error: #D95D5D.
+
+Utiliza los colores con moderación.
+
+El verde debe identificar ahorro, eficiencia y resultados favorables.
+
+El ámbar debe identificar advertencias o incertidumbre.
+
+El rojo debe reservarse para errores o anomalías que requieren atención.
+
+### 5.2. Modo claro y oscuro
+
+Implementa ambos modos.
+
+El modo claro debe ser limpio, de aspecto editorial y profesional.
+
+El modo oscuro debe utilizar fondos azul noche y superficies diferenciadas, evitando el negro absoluto en toda la pantalla.
+
+Permite elegir:
+
+- Claro.
+- Oscuro.
+- Automático según el sistema.
+
+Guarda la preferencia localmente.
+
+### 5.3. Tipografía
+
+Utiliza una tipografía moderna, legible y profesional.
+
+Utiliza jerarquías claras para:
+
+- Títulos.
+- Subtítulos.
+- Etiquetas.
+- Valores numéricos.
+- Unidades.
+- Datos secundarios.
+- Explicaciones.
+
+Los valores de consumo y dinero deben tener suficiente prominencia.
+
+Usa cifras tabulares cuando sea posible para evitar saltos visuales al actualizar números.
+
+### 5.4. Sistema de navegación
+
+En escritorio:
+
+- Barra lateral izquierda.
+- Encabezado superior.
+- Área central de contenido.
+- Paneles contextuales cuando aporten valor.
+
+En Android:
+
+- Navegación inferior.
+- Controles accesibles con el pulgar.
+- Encabezados compactos.
+- Formularios adaptados a pantallas pequeñas.
+- Diálogos que no excedan el área visible.
+
+Navegación principal:
+
+1. Inicio.
+2. Facturas.
+3. Aparatos.
+4. Laboratorio.
+5. Diagnóstico.
+6. Ahorro.
+
+Las opciones de tarifas, informes y configuración estarán disponibles en la navegación secundaria.
+
+No escondas funciones importantes en menús difíciles de encontrar.
+
+### 5.5. Microinteracciones
+
+Implementa transiciones moderadas.
+
+Incluye:
+
+- Animaciones suaves al cargar gráficos.
+- Estados hover en escritorio.
+- Confirmaciones al guardar.
+- Indicadores de progreso.
+- Transiciones entre secciones.
+- Diálogos elegantes.
+- Estados de carga.
+- Mensajes de error claros.
+
+No utilices animaciones excesivas que retrasen la utilización.
+
+### 5.6. Diseño adaptable
+
+Debe funcionar correctamente en:
+
+- Teléfonos Android.
+- Tablets.
+- Ordenadores.
+- Navegadores de escritorio.
+- WebView de Capacitor.
+
+No permitas desbordamientos horizontales.
+
+Los gráficos deben adaptarse a su contenedor.
+
+Las tablas deben transformarse en tarjetas o vistas desplazables en pantallas pequeñas.
+
+---
+
+# PARTE IV. CONFIGURACIÓN INICIAL Y PERFIL ENERGÉTICO
+
+## 6. Asistente de configuración inicial
+
+La primera vez que se abra VATIO, presenta un asistente de configuración profesional y sencillo.
+
+No obligues al usuario a rellenar información innecesaria.
+
+### Pantalla 1. Bienvenida
+
+Título:
+
+«Conoce mejor tu consumo eléctrico».
+
+Texto:
+
+«VATIO transforma tus facturas y tus hábitos de consumo en información útil para tomar mejores decisiones».
+
+Botón: Comenzar.
+
+### Pantalla 2. Ubicación energética
+
+Solicita:
+
+- País.
+- Provincia o región.
+- Ciudad.
+- Empresa distribuidora.
+- Moneda.
+
+El primer mercado prioritario será Costa Rica.
+
+Configura como valores regionales iniciales:
+
+- País: Costa Rica.
+- Moneda: CRC.
+- Código de moneda: ₡.
+- Idioma: español.
+- Zona horaria: America/Costa_Rica.
+- Formato de fecha: DD/MM/AAAA.
+
+Permite cambiar todos los valores posteriormente.
+
+No deduzcas automáticamente una distribuidora por el nombre de una ciudad si existen varias posibilidades.
+
+### Pantalla 3. Tipo de instalación
+
+Opciones:
+
+- Vivienda.
+- Apartamento.
+- Casa independiente.
+- Oficina.
+- Comercio pequeño.
+- Otro.
+
+Solicita opcionalmente:
+
+- Número de personas.
+- Área aproximada.
+- Tipo de construcción.
+- Uso residencial o comercial.
+
+No hagas obligatorios los datos que no sean necesarios para los cálculos.
+
+### Pantalla 4. Información tarifaria
+
+Permite seleccionar:
+
+- Tarifa residencial.
+- Tarifa comercial.
+- Otra categoría disponible.
+
+Si no existe una tarifa validada, permite continuar con el modo de estimación y una tarifa personalizada.
+
+No inventes tarifas ni presentes tarifas antiguas como actuales.
+
+### Pantalla 5. Finalización
+
+Mensaje:
+
+«Tu espacio energético está listo».
+
+Botón: Entrar a VATIO.
+
+El usuario debe poder modificar todo posteriormente.
+
+---
+
+# PARTE V. MÓDULO 1 — MI ENERGÍA
+
+## 7. Panel principal
+
+Esta es la pantalla más importante de VATIO.
+
+Debe ser la primera pantalla después de la configuración inicial.
+
+Su función es resumir el estado energético del hogar y permitir acceder rápidamente a las demás herramientas.
+
+### 7.1. Encabezado
+
+Mostrar:
+
+- Logotipo VATIO.
+- Saludo discreto.
+- Nombre del hogar o instalación.
+- Periodo seleccionado.
+- Icono de notificaciones locales, si existen.
+- Acceso a configuración.
+
+### 7.2. Tarjeta principal: gasto eléctrico
+
+Mostrar de forma prominente:
+
+**Gasto del periodo.**
+
+Datos:
+
+- Importe de la última factura registrada.
+- Moneda.
+- Periodo facturado.
+- Diferencia respecto al periodo anterior.
+- Variación porcentual.
+
+Ejemplo de visualización:
+
+«₡32.450»
+
+«12 % más que el periodo anterior».
+
+Estos números son únicamente ilustrativos y no deben aparecer como datos reales si no existen facturas.
+
+Si no existe información, mostrar:
+
+«Todavía no tienes facturas registradas».
+
+Botón: Añadir primera factura.
+
+### 7.3. Tarjeta de consumo
+
+Mostrar:
+
+- Consumo total en kWh.
+- Consumo diario promedio.
+- Diferencia respecto al periodo anterior.
+- Consumo estimado frente al registrado.
+
+Distingue visualmente los datos calculados de los datos declarados en una factura.
+
+### 7.4. Evolución del consumo
+
+Implementa un gráfico interactivo.
+
+Debe mostrar:
+
+- Consumo mensual.
+- Gasto mensual.
+- Comparación entre periodos.
+- Selección del rango temporal.
+
+Intervalos:
+
+- Últimos 3 meses.
+- Últimos 6 meses.
+- Últimos 12 meses.
+- Todo el historial.
+
+Permite activar y desactivar las series.
+
+Al pulsar un punto del gráfico, muestra información del periodo.
+
+### 7.5. Indicadores energéticos
+
+Incluye tarjetas compactas con:
+
+- Costo promedio por kWh.
+- Consumo promedio diario.
+- Gasto anual estimado.
+- Aparato de mayor consumo estimado.
+- Variación del consumo.
+- Número de facturas registradas.
+
+No calcules indicadores cuando falten datos suficientes.
+
+Muestra «Sin datos suficientes» en lugar de inventar resultados.
+
+### 7.6. Resumen de actividad
+
+Presenta las últimas acciones:
+
+- Factura registrada.
+- Electrodoméstico añadido.
+- Escenario de ahorro creado.
+- Informe generado.
+- Diagnóstico realizado.
+
+Cada actividad debe permitir abrir su registro correspondiente.
+
+### 7.7. Recomendaciones destacadas
+
+Mostrar un máximo de tres recomendaciones.
+
+Ejemplos de categorías:
+
+- Consumo superior al habitual.
+- Aparato de elevado consumo estimado.
+- Oportunidad de ahorro.
+- Posible inconsistencia en una factura.
+
+Las recomendaciones deben proceder de datos reales del usuario.
+
+### 7.8. Acciones rápidas
+
+Incluir:
+
+- Registrar factura.
+- Añadir aparato.
+- Simular ahorro.
+- Revisar diagnóstico.
+
+Cada acción debe navegar a la herramienta correspondiente y abrir el formulario adecuado.
+
+---
+
+# PARTE VI. MÓDULO 2 — ANALIZAR FACTURAS
+
+## 8. Centro de facturas
+
+Esta sección debe ser uno de los grandes diferenciadores de VATIO.
+
+Debe permitir registrar, almacenar, analizar, comparar y auditar facturas eléctricas.
+
+### 8.1. Pantalla principal
+
+Mostrar:
+
+- Facturas registradas.
+- Gasto acumulado.
+- Consumo acumulado.
+- Último periodo.
+- Evolución histórica.
+- Botón para añadir factura.
+
+Implementa búsqueda y filtros por:
+
+- Año.
+- Mes.
+- Distribuidora.
+- Tipo de tarifa.
+- Estado de análisis.
+- Rango de importes.
+
+### 8.2. Formas de introducir una factura
+
+Proporciona tres alternativas.
+
+**A. Introducción manual.**
+
+Formulario completo con:
+
+- Empresa distribuidora.
+- Número de factura, opcional.
+- Fecha de emisión.
+- Inicio del periodo.
+- Final del periodo.
+- Días facturados.
+- Lectura anterior.
+- Lectura actual.
+- Multiplicador del medidor.
+- Consumo total en kWh.
+- Importe total.
+- Moneda.
+- Categoría tarifaria.
+- Observaciones.
+
+**B. Fotografía o archivo.**
+
+Permite:
+
+- Abrir cámara cuando se encuentre disponible.
+- Seleccionar fotografía de la galería.
+- Adjuntar archivo PDF.
+- Visualizar la imagen.
+- Recortar o girar la imagen si la plataforma lo permite.
+
+**C. Registro mediante datos copiados.**
+
+Permite pegar texto extraído de una factura y facilitar su clasificación manual.
+
+### 8.3. Reconocimiento de texto
+
+Diseña una capa OCR independiente de la interfaz.
+
+Debe estar preparada para una implementación nativa de Google ML Kit cuando el proyecto se integre con Android mediante Capacitor.
+
+El flujo deseado es:
+
+1. El usuario captura o selecciona una factura.
+2. Se procesa localmente.
+3. Se extrae el texto.
+4. Se identifican campos candidatos.
+5. Se muestran los datos detectados.
+6. Se asigna un indicador de confianza cuando sea posible.
+7. El usuario revisa los datos.
+8. El usuario confirma.
+9. Se guarda la factura.
+10. El motor matemático ejecuta el análisis.
+
+Campos que debe intentar reconocer:
+
+- Empresa.
+- Nombre del titular, sin exigirlo.
+- Periodo.
+- Fecha de emisión.
+- Lectura anterior.
+- Lectura actual.
+- Consumo.
+- Precio unitario.
+- Cargo fijo.
+- Alumbrado público.
+- Impuestos.
+- Otros componentes.
+- Total a pagar.
+
+No aceptes silenciosamente campos dudosos.
+
+No inventes datos que no aparezcan en el documento.
+
+Los campos no reconocidos deben quedar vacíos para revisión.
+
+Importante: no marques la función como OCR nativo completado si todavía no existe el plugin de Android. En la versión web inicial, permite adjuntar la imagen y completar los datos manualmente. No simules reconocimiento automático.
+
+### 8.4. Validación de la factura
+
+Antes de guardar, comprueba:
+
+- Fechas válidas.
+- Periodo coherente.
+- Consumo no negativo.
+- Total no negativo.
+- Lectura actual compatible con la anterior, considerando los posibles reinicios del medidor.
+- Coherencia entre lecturas y consumo.
+- Moneda correcta.
+- Ausencia de duplicados evidentes.
+
+Si hay una discrepancia, no impidas guardar automáticamente. Explica la inconsistencia y permite corregirla.
+
+### 8.5. Desglose de la factura
+
+Una vez guardada, presenta una página individual para cada factura.
+
+Mostrar:
+
+**Resumen general**
+
+- Importe total.
+- Consumo.
+- Periodo.
+- Distribuidora.
+- Tarifa aplicada.
+- Fecha de registro.
+
+**Desglose económico**
+
+- Cargo fijo.
+- Energía consumida.
+- Impuestos.
+- Alumbrado público.
+- Cargos adicionales.
+- Otros conceptos.
+- Total.
+
+Los conceptos desconocidos deben poder registrarse como cargos personalizados.
+
+Cada componente debe poder abrirse para mostrar su explicación.
+
+### 8.6. Auditoría matemática
+
+Implementa una herramienta de comprobación aritmética.
+
+Debe comparar:
+
+- Suma de los conceptos.
+- Total indicado en la factura.
+- Diferencia entre ambos.
+- Lecturas del medidor.
+- Consumo indicado.
+- Consumo derivado de las lecturas.
+
+Si la suma de los componentes no coincide con el importe total, presenta:
+
+«Se ha detectado una diferencia aritmética».
+
+Muestra exactamente:
+
+- Total declarado.
+- Total calculado.
+- Diferencia.
+- Conceptos utilizados.
+
+No afirmes que existe un error de la distribuidora cuando solamente has encontrado una diferencia.
+
+Distingue entre:
+
+1. Diferencia aritmética confirmada.
+2. Dato aparentemente inconsistente.
+3. Información insuficiente.
+4. Resultado coherente con los datos disponibles.
+
+### 8.7. Comprobación tarifaria
+
+Si existe una tarifa validada y aplicable al periodo, permite recalcular la factura.
+
+Compara:
+
+- Importe registrado.
+- Importe calculado.
+- Consumo utilizado.
+- Conceptos incluidos.
+- Diferencia.
+
+Indica claramente si el resultado es:
+
+- Verificación con tarifa documentada.
+- Estimación con tarifa personalizada.
+- Comparación incompleta por falta de información.
+
+Nunca declares que una factura es incorrecta solamente porque un cálculo aproximado no coincide con el recibo.
+
+### 8.8. Comparación entre facturas
+
+Implementa una herramienta que compare dos o más periodos.
+
+Mostrar:
+
+- Diferencia en kWh.
+- Diferencia económica.
+- Variación porcentual.
+- Días de facturación.
+- Promedio diario de consumo.
+- Costo medio por kWh.
+- Cambios de tarifa, cuando existan.
+
+Permite identificar si el gasto aumentó por:
+
+- Mayor consumo.
+- Cambio tarifario.
+- Mayor duración del periodo.
+- Nuevos cargos.
+- Cambios en impuestos.
+
+No atribuyas una causa cuando los datos no permiten demostrarla.
+
+### 8.9. Historial de facturas
+
+Cada factura debe poder:
+
+- Consultarse.
+- Editarse.
+- Eliminarse con confirmación.
+- Compararse.
+- Exportarse.
+- Asociarse a un escenario.
+- Consultarse desde el panel principal.
+
+---
+
+# PARTE VII. MOTOR TARIFARIO
+
+## 9. Administrador de tarifas eléctricas
+
+Construye un motor tarifario flexible.
+
+No debe depender de una sola estructura tarifaria.
+
+Debe permitir trabajar con las particularidades de diferentes países, empresas y categorías de usuarios.
+
+### 9.1. Ficha de una tarifa
+
+Cada tarifa debe incluir:
+
+- Identificador único.
+- País.
+- Región.
+- Empresa distribuidora.
+- Categoría de cliente.
+- Nombre de la tarifa.
+- Moneda.
+- Unidad de energía.
+- Fecha de entrada en vigor.
+- Fecha de vencimiento, si existe.
+- Fuente documental.
+- Enlace oficial, cuando se conozca.
+- Fecha de verificación.
+- Estado de validación.
+- Observaciones.
+
+### 9.2. Tipos de cobro
+
+Admite:
+
+**Tarifa fija por kWh.**
+
+El precio energético es constante para todo el consumo.
+
+**Tarifa por bloques progresivos.**
+
+Cada bloque posee un rango y un precio propio.
+
+Ejemplo ilustrativo:
+
+- Primer bloque: 0–100 kWh.
+- Segundo bloque: 101–200 kWh.
+- Tercer bloque: más de 200 kWh.
+
+Los valores y precios son ejemplos de estructura, nunca tarifas reales.
+
+Permite escoger cómo se aplica el bloque:
+
+- Marginal: cada porción del consumo se cobra según el bloque correspondiente.
+- Integral: el precio del bloque seleccionado se aplica al consumo completo.
+
+No asumas cuál se utiliza sin documentación.
+
+**Tarifa horaria.**
+
+Permite separar consumo por franjas horarias:
+
+- Valle.
+- Llano.
+- Punta.
+
+Solamente cuando exista información suficiente para conocer el consumo de cada franja.
+
+**Tarifa de demanda.**
+
+Permite registrar cargos por potencia máxima demandada cuando la categoría lo requiera.
+
+**Cargos fijos.**
+
+Admite cargos independientes del consumo.
+
+### 9.3. Impuestos y conceptos adicionales
+
+Implementa conceptos configurables:
+
+- Impuestos porcentuales.
+- Cargos fijos.
+- Alumbrado público.
+- Contribuciones.
+- Cargos de servicio.
+- Penalizaciones.
+- Otros componentes.
+
+Cada concepto debe poder indicar su base de cálculo.
+
+Por ejemplo:
+
+- Aplicado al consumo.
+- Aplicado al subtotal.
+- Aplicado a un cargo específico.
+- Aplicado al total previo.
+- Cargo fijo independiente.
+
+Respeta el orden de aplicación configurado.
+
+No dupliques conceptos ni apliques impuestos sobre componentes no sujetos a ellos.
+
+### 9.4. Calculadora de tarifas
+
+Permite introducir un número de kWh y obtener:
+
+- Costo de energía.
+- Cargo fijo.
+- Cargos adicionales.
+- Impuestos.
+- Total estimado.
+- Precio efectivo medio por kWh.
+
+Presenta el desglose completo.
+
+### 9.5. Vigencia histórica
+
+Una tarifa puede cambiar.
+
+VATIO debe conservar versiones históricas.
+
+Si se calcula una factura antigua, se debe seleccionar la tarifa que estaba vigente durante el periodo correspondiente.
+
+No reemplaces las tarifas anteriores al actualizar una nueva versión.
+
+### 9.6. Importación de tarifas
+
+Prepara la estructura para importar tarifas mediante:
+
+- JSON validado.
+- CSV estructurado.
+- Formulario manual.
+
+Cada importación debe poder revisarse antes de incorporarse.
+
+No descargues ni instales automáticamente tarifas encontradas en Internet.
+
+La fuente debe identificarse y la versión debe quedar registrada.
+
+### 9.7. Mercado inicial: Costa Rica
+
+Configura Costa Rica como primer mercado.
+
+Prepara el sistema para empresas distribuidoras y estructuras tarifarias del país.
+
+No introduzcas precios actuales sin una fuente oficial verificada, con fecha de vigencia.
+
+No confundas una tarifa publicada para una distribuidora con otra.
+
+No supongas que todos los clientes de una misma provincia tienen la misma tarifa.
+
+La aplicación debe permitir que el usuario introduzca su propia estructura tarifaria hasta disponer de un catálogo oficial verificado.
+
+---
+
+# PARTE VIII. MÓDULO 3 — MIS APARATOS
+
+## 10. Inventario energético del hogar
+
+Esta sección debe permitir conocer cuánto consume cada aparato y cuánto representa dentro del gasto eléctrico total.
+
+### 10.1. Pantalla principal
+
+Presentar:
+
+- Número de aparatos.
+- Consumo estimado total.
+- Costo estimado mensual.
+- Distribución del consumo.
+- Aparatos con mayor consumo.
+- Botón para añadir aparato.
+
+### 10.2. Categorías
+
+Crear un catálogo organizado:
+
+**Climatización**
+- Aire acondicionado.
+- Ventilador.
+- Calefactor.
+- Deshumidificador.
+
+**Cocina**
+- Refrigerador.
+- Congelador.
+- Microondas.
+- Cocina eléctrica.
+- Horno.
+- Cafetera.
+- Freidora de aire.
+
+**Lavandería**
+- Lavadora.
+- Secadora.
+- Plancha.
+
+**Agua caliente**
+- Calentador eléctrico.
+- Ducha eléctrica.
+
+**Entretenimiento**
+- Televisor.
+- Consola.
+- Equipo de sonido.
+
+**Informática**
+- Ordenador de escritorio.
+- Portátil.
+- Monitor.
+- Impresora.
+- Router.
+
+**Iluminación**
+- Bombillas LED.
+- Bombillas convencionales.
+- Iluminación exterior.
+
+**Otros**
+- Equipos personalizados.
+
+El catálogo debe ser ampliable.
+
+### 10.3. Añadir un aparato
+
+Formulario con:
+
+- Nombre.
+- Categoría.
+- Marca, opcional.
+- Modelo, opcional.
+- Cantidad.
+- Potencia nominal en W.
+- Potencia en modo de espera, opcional.
+- Horas de uso diario.
+- Días de utilización.
+- Frecuencia semanal.
+- Consumo por ciclo, si corresponde.
+- Temporadas de uso.
+- Observaciones.
+
+Permite utilizar:
+
+1. Potencia indicada por el fabricante.
+2. Potencia medida por el usuario.
+3. Valor genérico estimado.
+4. Valor introducido manualmente.
+
+Cada valor debe indicar su procedencia.
+
+### 10.4. Cálculo del consumo
+
+Implementar las siguientes fórmulas.
+
+Para aparatos de potencia relativamente estable:
+
+\[
+E=\frac{P \cdot h \cdot d \cdot n}{1000}
+\]
+
+Donde:
+
+- \(E\): energía en kWh.
+- \(P\): potencia en W.
+- \(h\): horas de funcionamiento diario.
+- \(d\): días de funcionamiento.
+- \(n\): número de unidades.
+
+Para aparatos con ciclos:
+
+\[
+E_{\text{mes}}=E_{\text{ciclo}}\cdot N_{\text{ciclos}}
+\]
+
+Para consumo en espera:
+
+\[
+E_{\text{espera}}=
+\frac{P_{\text{espera}}\cdot h_{\text{espera}}\cdot d}{1000}
+\]
+
+Permite añadir un factor de utilización o ciclo de trabajo cuando sea técnicamente apropiado.
+
+No asumas que la potencia nominal es necesariamente la potencia media real.
+
+### 10.5. Costo económico
+
+El costo debe calcularse usando el motor tarifario.
+
+No utilices siempre una simple multiplicación por un precio fijo si el sistema tarifario tiene bloques progresivos.
+
+El usuario debe poder conocer:
+
+- Consumo estimado mensual.
+- Costo mensual estimado.
+- Costo anual proyectado.
+- Porcentaje estimado del consumo doméstico.
+- Horas de uso.
+- Supuestos utilizados.
+
+### 10.6. Ficha individual
+
+Cada aparato tendrá una ficha detallada.
+
+Mostrar:
+
+- Nombre.
+- Imagen o ilustración representativa.
+- Características.
+- Potencia.
+- Consumo diario.
+- Consumo mensual.
+- Costo mensual.
+- Costo anual.
+- Histórico de cambios.
+- Comparación con otros aparatos.
+
+La imagen del aparato debe ser ilustrativa. No debe utilizarse para identificar automáticamente especificaciones técnicas.
+
+### 10.7. Comparación de electrodomésticos
+
+Permite comparar dos o más aparatos.
+
+Ejemplo:
+
+- Refrigerador A.
+- Refrigerador B.
+
+Mostrar:
+
+- Potencia nominal.
+- Consumo declarado.
+- Consumo estimado.
+- Costo anual.
+- Diferencia económica.
+- Periodo de recuperación, cuando se registre el precio de compra y existan datos adecuados.
+
+### 10.8. Catálogo orientativo
+
+Crea un catálogo inicial de valores típicos orientativos para facilitar la introducción de aparatos.
+
+Cada valor debe marcarse como:
+
+«Referencia estimada. Verifique la potencia real del fabricante».
+
+Nunca lo presentes como una especificación universal.
+
+El usuario debe poder modificar todos los valores.
+
+### 10.9. Mantenimiento del inventario
+
+Permite:
+
+- Añadir.
+- Editar.
+- Duplicar.
+- Desactivar temporalmente.
+- Eliminar.
+- Ordenar por costo.
+- Ordenar por consumo.
+- Filtrar por categoría.
+
+Al desactivar un aparato, no elimines su historial anterior.
+
+---
+
+# PARTE IX. MÓDULO 4 — LABORATORIO DE AHORRO
+
+## 11. Simulador energético
+
+Esta sección debe ser una de las experiencias más atractivas de VATIO.
+
+Su objetivo es que el usuario pueda experimentar con diferentes hábitos y equipos antes de realizar cambios en su hogar.
+
+Quiero una herramienta visual, didáctica y matemáticamente rigurosa.
+
+### 11.1. Pantalla del laboratorio
+
+Título:
+
+«Experimenta con tu consumo».
+
+Descripción:
+
+«Modifica tus hábitos, compara escenarios y descubre cómo podrían cambiar tus gastos».
+
+Mostrar:
+
+- Escenario actual.
+- Escenario experimental.
+- Diferencia energética.
+- Diferencia económica.
+- Ahorro mensual estimado.
+- Ahorro anual estimado.
+
+### 11.2. Simulación de hábitos
+
+Permite cambiar:
+
+- Horas de aire acondicionado.
+- Horas de iluminación.
+- Uso de calentador.
+- Número de ciclos de lavado.
+- Horas de ordenador.
+- Utilización de electrodomésticos.
+- Temperatura seleccionada del aire acondicionado, cuando exista un modelo técnico suficiente.
+
+El resultado debe calcularse inmediatamente.
+
+### 11.3. Simulación de sustitución de aparatos
+
+Permite comparar:
+
+- Aparato actual.
+- Aparato alternativo.
+- Diferencia de consumo.
+- Diferencia de costo.
+- Precio de sustitución.
+- Ahorro anual esperado.
+- Tiempo de recuperación.
+
+Si el precio de sustitución no se conoce, no inventes un retorno de inversión.
+
+### 11.4. Escenarios personalizados
+
+Permite crear escenarios con nombre.
+
+Ejemplos:
+
+- Uso actual.
+- Consumo reducido.
+- Vivienda eficiente.
+- Sustitución de refrigerador.
+- Reducción de climatización.
+
+Cada escenario debe conservar:
+
+- Fecha de creación.
+- Datos originales.
+- Cambios realizados.
+- Resultados.
+- Supuestos.
+- Notas del usuario.
+
+### 11.5. Comparación visual
+
+Utiliza gráficos para comparar:
+
+- Consumo actual.
+- Consumo simulado.
+- Costo actual.
+- Costo simulado.
+- Ahorro acumulado.
+
+Los resultados deben poder consultarse en distintos horizontes:
+
+- Diario.
+- Mensual.
+- Anual.
+
+### 11.6. Comparación de tarifas
+
+Cuando existan dos tarifas válidas para la misma instalación, permite calcular cómo cambiaría la factura.
+
+Mostrar:
+
+- Consumo introducido.
+- Tarifa A.
+- Tarifa B.
+- Diferencia.
+- Cargos incluidos.
+- Supuestos.
+
+Nunca afirmes que una tarifa es mejor en general si depende del perfil horario o de la categoría del cliente.
+
+### 11.7. Sensibilidad
+
+Añade una herramienta para modificar una variable gradualmente.
+
+Ejemplo:
+
+«¿Cómo cambia mi factura si utilizo el aire acondicionado entre 2 y 8 horas diarias?».
+
+Permite mover un control deslizante y observar la curva resultante.
+
+Implementa escenarios con rangos, pero identifica claramente cuáles son resultados calculados y cuáles dependen de supuestos.
+
+### 11.8. Comparación y guardado
+
+Permite guardar escenarios favoritos, renombrarlos, duplicarlos, eliminarlos y compararlos posteriormente.
+
+---
+
+# PARTE X. MÓDULO 5 — DIAGNÓSTICO ENERGÉTICO
+
+## 12. Sistema de diagnóstico
+
+Esta herramienta debe analizar la información registrada y detectar patrones, inconsistencias y posibles oportunidades de mejora.
+
+No debe emitir diagnósticos automáticos sin suficiente información.
+
+### 12.1. Análisis de consumo
+
+Cuando haya suficientes facturas, comparar:
+
+- Consumo actual.
+- Consumo anterior.
+- Promedio histórico.
+- Consumo diario.
+- Variaciones estacionales.
+- Días facturados.
+
+Detectar incrementos significativos.
+
+La regla para identificar una variación anormal debe poder configurarse y distinguir una alerta estadística de una avería.
+
+### 12.2. Anomalías
+
+Implementar detección basada en reglas matemáticas:
+
+- Aumento de consumo fuera del comportamiento histórico.
+- Consumo negativo o imposible.
+- Duración atípica de facturación.
+- Lecturas incompatibles.
+- Diferencias entre subtotal y total.
+- Costos unitarios atípicos.
+- Duplicidad de periodos.
+- Desviación entre inventario de aparatos y consumo facturado.
+
+Cada anomalía debe incluir:
+
+1. Qué se detectó.
+2. En qué datos se basa.
+3. Cuánto se desvía.
+4. Por qué merece revisión.
+5. Qué información falta.
+6. Qué podría hacer el usuario.
+
+### 12.3. Comparación entre consumo estimado y facturado
+
+Comparar:
+
+- Suma del consumo estimado de aparatos.
+- Consumo indicado en la factura.
+
+Mostrar la diferencia.
+
+Explicar que el inventario puede estar incompleto o que las potencias y horas de utilización pueden ser estimaciones.
+
+No concluyas que el medidor está defectuoso por una diferencia entre ambas cantidades.
+
+### 12.4. Análisis del costo
+
+Investigar las causas posibles del aumento de una factura.
+
+Distinguir:
+
+- Mayor consumo.
+- Modificación de tarifa.
+- Aumento de cargos fijos.
+- Incremento de impuestos.
+- Diferencia en duración del periodo.
+- Cambio de estructura de bloques.
+
+Cuando no sea posible separar las causas, indicarlo.
+
+### 12.5. Nivel de confianza
+
+Cada diagnóstico debe indicar su calidad informativa:
+
+- Alta: dispone de información suficiente y verificable.
+- Media: existen datos útiles, pero faltan elementos.
+- Baja: se basa en información limitada.
+
+Especifica por qué se asignó ese nivel.
+
+### 12.6. Ficha de diagnóstico
+
+Cada resultado tendrá:
+
+- Título.
+- Fecha.
+- Categoría.
+- Gravedad.
+- Descripción.
+- Evidencia numérica.
+- Cálculo.
+- Confianza.
+- Recomendación.
+- Estado: pendiente, revisado o descartado.
+
+Permite consultar diagnósticos anteriores.
+
+### 12.7. Predicción del consumo
+
+Implementa un sistema de pronóstico local.
+
+Comienza con métodos sencillos y reproducibles:
+
+- Promedio móvil.
+- Tendencia lineal.
+- Comparación con periodos equivalentes.
+- Proyección basada en consumo diario.
+
+La predicción debe considerar la duración del periodo.
+
+Si existe una cantidad insuficiente de facturas, muestra:
+
+«Todavía no hay suficientes datos históricos para generar una predicción fiable».
+
+Distingue claramente:
+
+- Consumo observado.
+- Consumo proyectado.
+- Costo proyectado.
+
+No presentes una predicción como una factura definitiva.
+
+### 12.8. Proyección del recibo
+
+Permite estimar el costo del próximo recibo utilizando:
+
+- Consumo reciente.
+- Tarifa vigente.
+- Días esperados del periodo.
+- Cambios registrados.
+- Factores estacionales, únicamente si existen datos.
+
+Mostrar un intervalo estimado cuando sea razonable y explicar su incertidumbre.
+
+---
+
+# PARTE XI. MÓDULO 6 — PLAN DE AHORRO
+
+## 13. Gestor de eficiencia energética
+
+Esta sección debe convertir los resultados anteriores en acciones concretas.
+
+No quiero recomendaciones genéricas como «apaga las luces cuando no las necesites».
+
+Cada recomendación debe estar relacionada con los registros reales del usuario.
+
+### 13.1. Inicio del plan
+
+Mostrar:
+
+- Ahorro potencial mensual.
+- Ahorro potencial anual.
+- Número de oportunidades detectadas.
+- Acciones completadas.
+- Evolución del plan.
+
+No sumar oportunidades incompatibles o que se solapen como si fueran ahorros independientes.
+
+### 13.2. Priorización de acciones
+
+Clasificar las recomendaciones según:
+
+- Ahorro económico potencial.
+- Ahorro energético.
+- Costo de implementación.
+- Dificultad.
+- Tiempo de recuperación.
+- Nivel de confianza.
+- Impacto ambiental, si hay factores de emisión documentados.
+
+### 13.3. Fichas de acciones
+
+Ejemplo de ficha:
+
+«Reducir el tiempo de climatización».
+
+Debe mostrar:
+
+- Aparato afectado.
+- Consumo actual estimado.
+- Consumo alternativo.
+- Reducción de kWh.
+- Ahorro mensual.
+- Ahorro anual.
+- Supuestos.
+- Nivel de confianza.
+- Pasos sugeridos.
+
+### 13.4. Lista de tareas
+
+Permite que el usuario cree un plan personal.
+
+Funciones:
+
+- Marcar acciones realizadas.
+- Añadir fecha.
+- Añadir observaciones.
+- Registrar cambios de hábitos.
+- Comparar resultados antes y después.
+
+### 13.5. Evaluación posterior
+
+Después de completar una acción, permitir comparar los periodos siguientes con los anteriores.
+
+No atribuyas automáticamente toda reducción a la acción realizada.
+
+Explica que pueden existir otros factores que influyen en el resultado.
+
+### 13.6. Registro de inversiones
+
+Permite registrar compras relacionadas con eficiencia energética:
+
+- Aparato nuevo.
+- Iluminación LED.
+- Aislamiento.
+- Mejoras de climatización.
+- Otros.
+
+Solicitar:
+
+- Precio.
+- Fecha de compra.
+- Consumo anterior.
+- Consumo nuevo.
+- Ahorro observado.
+- Garantía, opcional.
+
+Calcular periodo de recuperación cuando se disponga de información suficiente.
+
+---
+
+# PARTE XII. HERRAMIENTAS COMPLEMENTARIAS
+
+## 14. Calculadora eléctrica independiente
+
+Incorpora una herramienta accesible desde un menú de utilidades.
+
+Permite calcular:
+
+- W a kW.
+- kW a W.
+- Wh a kWh.
+- kWh a Wh.
+- Energía por potencia y tiempo.
+- Costo energético.
+- Consumo mensual.
+- Consumo anual.
+- Potencia a partir de energía y tiempo.
+- Tiempo de utilización a partir de energía y potencia.
+
+Incluye fórmulas visibles.
+
+Ejemplo:
+
+\[
+E=P\cdot t
+\]
+
+La herramienta debe indicar unidades y validar dimensionalmente las entradas.
+
+## 15. Conversor de unidades
+
+Admite:
+
+- W.
+- kW.
+- MW.
+- Wh.
+- kWh.
+- MWh.
+- Horas.
+- Minutos.
+- Días.
+
+Permite copiar resultados.
+
+## 16. Glosario energético
+
+Crea un glosario didáctico con términos como:
+
+- Potencia.
+- Energía.
+- Tensión.
+- Corriente.
+- Resistencia.
+- Factor de potencia.
+- Kilovatio-hora.
+- Demanda máxima.
+- Consumo en espera.
+- Eficiencia.
+- Tarifa progresiva.
+- Medidor.
+- Lectura estimada.
+
+Cada término debe incluir:
+
+- Definición sencilla.
+- Explicación técnica.
+- Unidad correspondiente.
+- Fórmula, si aplica.
+- Ejemplo numérico.
+- Aplicación práctica.
+
+No conviertas el glosario en un tratado innecesariamente extenso, pero sí en una herramienta educativa seria.
+
+## 17. Centro de ayuda
+
+Incluye:
+
+- Introducción a VATIO.
+- Cómo registrar una factura.
+- Cómo configurar una tarifa.
+- Cómo añadir aparatos.
+- Cómo interpretar los diagnósticos.
+- Cómo crear escenarios.
+- Cómo exportar información.
+- Preguntas frecuentes.
+- Explicación de las limitaciones de las estimaciones.
+
+---
+
+# PARTE XIII. INFORMES Y EXPORTACIONES
+
+## 18. Centro de informes
+
+Implementa generación local de informes.
+
+El usuario debe poder obtener informes PDF sin depender de una API externa.
+
+### 18.1. Informe mensual
+
+Incluir:
+
+- Identificación de la instalación.
+- Periodo.
+- Consumo.
+- Costo.
+- Comparación con periodos previos.
+- Distribución del consumo.
+- Principales aparatos.
+- Diagnósticos.
+- Recomendaciones.
+
+### 18.2. Informe anual
+
+Incluir:
+
+- Consumo total anual.
+- Gasto acumulado.
+- Promedios mensuales.
+- Evolución.
+- Periodos de mayor consumo.
+- Distribución por aparatos.
+- Acciones realizadas.
+- Ahorro observado cuando pueda demostrarse.
+
+### 18.3. Informe de factura
+
+Debe presentar:
+
+- Datos registrados.
+- Desglose de importes.
+- Comprobaciones.
+- Diferencias.
+- Fuente tarifaria.
+- Advertencias.
+
+### 18.4. Informe de eficiencia
+
+Debe mostrar:
+
+- Inventario.
+- Consumo estimado por aparato.
+- Oportunidades.
+- Escenarios.
+- Ahorro potencial.
+- Inversiones.
+- Recuperación estimada.
+
+### 18.5. Exportación adicional
+
+Permite exportar:
+
+- CSV de facturas.
+- CSV de aparatos.
+- JSON de respaldo completo.
+- PDF de informes.
+
+Las exportaciones deben conservar formatos comprensibles.
+
+---
+
+# PARTE XIV. BASE DE DATOS Y MODELOS
+
+## 19. Entidades principales
+
+Diseña esquemas tipados y relaciones claras.
+
+### Household
+
+```typescript
+interface Household {
+  id: string;
+  name: string;
+  country: string;
+  region?: string;
+  city?: string;
+  distributor?: string;
+  currency: string;
+  currencyDecimals: number;
+  timezone: string;
+  installationType: string;
+  occupants?: number;
+  createdAt: string;
+  updatedAt: string;
+}
+```
+
+### Invoice
+
+```typescript
+interface Invoice {
+  id: string;
+  householdId: string;
+  distributor?: string;
+  invoiceNumber?: string;
+  issueDate?: string;
+  periodStart: string;
+  periodEnd: string;
+  billingDays: number;
+  previousReading?: number;
+  currentReading?: number;
+  meterMultiplier?: number;
+  consumptionKwh: number;
+  currency: string;
+  declaredTotalMinorUnits: number;
+  calculatedTotalMinorUnits?: number;
+  tariffId?: string;
+  tariffVersionId?: string;
+  dataOrigin: string;
+  verificationStatus: string;
+  notes?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+```
+
+### Appliance
+
+```typescript
+interface Appliance {
+  id: string;
+  householdId: string;
+  name: string;
+  category: string;
+  quantity: number;
+  powerWatts?: number;
+  standbyWatts?: number;
+  usageHoursPerDay?: number;
+  usageDaysPerMonth?: number;
+  energyPerCycleKwh?: number;
+  cyclesPerMonth?: number;
+  dutyCycle?: number;
+  dataOrigin: string;
+  confidence: string;
+  active: boolean;
+  notes?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+```
+
+### Tariff
+
+```typescript
+interface Tariff {
+  id: string;
+  country: string;
+  distributor: string;
+  customerCategory: string;
+  name: string;
+  currency: string;
+  calculationMethod: string;
+  validFrom: string;
+  validUntil?: string;
+  sourceName?: string;
+  sourceUrl?: string;
+  verifiedAt?: string;
+  validationStatus: string;
+  components: TariffComponent[];
+}
+```
+
+### Scenario
+
+```typescript
+interface Scenario {
+  id: string;
+  householdId: string;
+  name: string;
+  description?: string;
+  baselineId?: string;
+  changes: Record<string, unknown>;
+  baselineKwh: number;
+  simulatedKwh: number;
+  baselineCostMinorUnits: number;
+  simulatedCostMinorUnits: number;
+  assumptions: string[];
+  createdAt: string;
+}
+```
+
+Adapta los esquemas cuando sea necesario, sin duplicar entidades ni debilitar los tipos.
+
+No utilices `any` de forma indiscriminada.
+
+Todas las entidades deben tener identificadores únicos.
+
+Implementa validación de entrada y migraciones.
+
+Para dinero, evita errores de precisión de punto flotante. Utiliza unidades monetarias menores enteras o una representación decimal apropiada. Controla también la precisión de las cantidades de energía.
+
+---
+
+# PARTE XV. PRIVACIDAD, SEGURIDAD Y RECUPERACIÓN
+
+## 20. Protección de datos
+
+VATIO debe aplicar privacidad desde el diseño.
+
+La versión inicial debe almacenar los datos localmente.
+
+No envíes facturas, fotografías, direcciones, hábitos de consumo ni datos personales a servicios externos.
+
+No incorpores telemetría invasiva.
+
+No incluyas claves secretas en el código cliente.
+
+No crees sistemas de seguimiento innecesarios.
+
+### 20.1. Copias de seguridad
+
+Permite exportar un respaldo completo en JSON.
+
+Ofrece una opción adicional de respaldo cifrado mediante contraseña, utilizando Web Crypto API con un mecanismo moderno de derivación de claves y cifrado autenticado.
+
+La contraseña no debe almacenarse.
+
+### 20.2. Restauración
+
+Permite:
+
+- Seleccionar respaldo.
+- Validar estructura.
+- Mostrar resumen de registros.
+- Detectar incompatibilidades de versión.
+- Confirmar restauración.
+- Evitar duplicaciones.
+- Recuperar los datos.
+
+### 20.3. Eliminación de datos
+
+Permite eliminar:
+
+- Una factura.
+- Un aparato.
+- Un escenario.
+- Un diagnóstico.
+- Toda la información de una instalación.
+
+Solicita confirmación antes de eliminar información importante.
+
+No confundas eliminar un registro con borrar toda la instalación.
+
+### 20.4. Información legal
+
+Incluye secciones preparadas para:
+
+- Política de privacidad.
+- Condiciones de uso.
+- Limitaciones de los resultados.
+- Aviso sobre estimaciones.
+
+Deja claro que VATIO no sustituye al medidor oficial, a la distribuidora ni a un profesional electricista.
+
+---
+
+# PARTE XVI. CALIDAD DE LOS DATOS Y TRANSPARENCIA
+
+## 21. Clasificación obligatoria de resultados
+
+Toda cifra debe estar asociada a su procedencia.
+
+Utiliza estas etiquetas:
+
+**MEDIDO**
+
+Procede de un instrumento de medición o de una lectura documentada.
+
+**DECLARADO**
+
+Ha sido indicado por el usuario o extraído de una factura y confirmado por él.
+
+**CALCULADO**
+
+Se obtiene matemáticamente a partir de datos introducidos.
+
+**ESTIMADO**
+
+Se basa en parámetros orientativos o supuestos.
+
+**PREDICHO**
+
+Es una proyección hacia un periodo futuro.
+
+**NO VERIFICADO**
+
+No se dispone de documentación suficiente para validar el dato.
+
+Estas etiquetas deben aparecer visualmente cerca del valor correspondiente.
+
+## 22. Explicación de resultados
+
+Cada cálculo importante debe ofrecer un botón:
+
+«¿Cómo se calculó?».
+
+Al pulsarlo, abre un diálogo con:
+
+- Fórmula.
+- Variables.
+- Valores utilizados.
+- Sustitución numérica.
+- Resultado.
+- Unidades.
+- Supuestos.
+- Limitaciones.
+
+Ejemplo:
+
+```text
+Potencia: 1200 W
+Tiempo: 4 horas diarias
+Días: 30
+
+E = (1200 × 4 × 30) / 1000
+
+E = 144 kWh
+```
+
+Indicar que el resultado depende de que el aparato funcione efectivamente con la potencia supuesta durante ese tiempo.
+
+Esto es esencial para la credibilidad científica de VATIO.
+
+---
+
+# PARTE XVII. EXPERIENCIA DEL USUARIO
+
+## 23. Estados de la aplicación
+
+Todas las pantallas deben contemplar:
+
+- Cargando.
+- Vacío.
+- Correcto.
+- Error.
+- Sin conexión.
+- Datos incompletos.
+- Resultado estimado.
+- Confirmación.
+- Advertencia.
+
+No dejes pantallas en blanco ante un error.
+
+### 23.1. Formularios
+
+Los formularios deben tener:
+
+- Etiquetas comprensibles.
+- Unidades visibles.
+- Ayuda contextual.
+- Validación inmediata.
+- Mensajes específicos.
+- Valores opcionales correctamente identificados.
+- Confirmación antes de guardar cuando corresponda.
+
+### 23.2. Búsqueda y filtros
+
+Implementa búsqueda local rápida en:
+
+- Facturas.
+- Aparatos.
+- Escenarios.
+- Diagnósticos.
+- Informes.
+
+### 23.3. Notificaciones locales
+
+Prepara notificaciones opcionales para:
+
+- Recordatorio de introducir la factura mensual.
+- Revisar un diagnóstico pendiente.
+- Evaluar una acción de ahorro.
+- Registrar una nueva lectura.
+
+Solicita permiso únicamente cuando sea necesario.
+
+No envíes notificaciones remotas.
+
+### 23.4. Accesibilidad
+
+Implementa:
+
+- Contraste suficiente.
+- Navegación por teclado.
+- Etiquetas accesibles.
+- Tamaño adecuado de objetivos táctiles.
+- Descripciones para gráficos.
+- Alternativas textuales a los colores.
+- Tipografía adaptable.
+- Lectores de pantalla.
+
+---
+
+# PARTE XVIII. REQUISITOS ESPECÍFICOS PARA ANDROID
+
+## 24. Compatibilidad con Capacitor
+
+La aplicación web debe quedar preparada para convertirse en Android.
+
+Prepara:
+
+- Diseño mobile-first.
+- Gestión de navegación.
+- Permisos controlados.
+- Estados de cámara.
+- Gestión del ciclo de vida.
+- Persistencia.
+- Recursos locales.
+- Iconos.
+- Pantalla de inicio.
+- Comportamiento del botón atrás.
+- Área segura y barras del sistema.
+
+No introduzcas dependencias nativas que impidan ejecutar la aplicación desde el navegador.
+
+### 24.1. Cámara
+
+Prepara la abstracción para seleccionar archivos y utilizar la cámara desde el navegador.
+
+Deja preparada la futura conexión con Capacitor para capturar documentos.
+
+### 24.2. OCR nativo
+
+Deja definido un servicio:
+
+```typescript
+interface OcrService {
+  isAvailable(): Promise<boolean>;
+  recognizeImage(imageUri: string): Promise<OcrResult>;
+}
+```
+
+Crea la implementación de interfaz y el adaptador preparado para la futura implementación nativa.
+
+La integración definitiva con Google ML Kit debe realizarse a través de un plugin o puente nativo compatible con Capacitor.
+
+No declares el OCR nativo implementado hasta que haya sido probado en un dispositivo Android.
+
+### 24.3. Compatibilidad de versiones
+
+Comprueba las versiones reales de las dependencias del proyecto antes de añadir paquetes.
+
+No inventes nombres de plugins ni utilices paquetes abandonados sin justificación.
+
+Documenta exactamente los pasos posteriores para completar la integración en Android Studio.
+
+---
+
+# PARTE XIX. FUNCIONALIDADES AVANZADAS FUTURAS
+
+## 25. Preparación para futuras ampliaciones
+
+No es necesario construir todos estos elementos durante el primer ciclo, pero la arquitectura no debe impedir desarrollarlos.
+
+### 25.1. Múltiples instalaciones
+
+Permitir que una persona gestione:
+
+- Casa.
+- Apartamento.
+- Oficina.
+- Segundo hogar.
+- Pequeño negocio.
+
+Cada instalación conservará sus propias facturas, aparatos, tarifas, escenarios e informes.
+
+### 25.2. Gestión comercial
+
+Incorporar posteriormente:
+
+- Varios medidores.
+- Demanda eléctrica.
+- Horarios de operación.
+- Costos por departamentos.
+- Múltiples instalaciones.
+- Informes comparativos.
+- Indicadores de eficiencia comercial.
+
+### 25.3. Integración con medidores inteligentes
+
+Preparar una futura arquitectura de integración con dispositivos compatibles.
+
+No simular conexión a medidores ni afirmar que se realiza medición en tiempo real cuando no existe un dispositivo conectado.
+
+### 25.4. Energía solar
+
+Reservar una extensión futura para:
+
+- Producción fotovoltaica.
+- Autoconsumo.
+- Energía exportada.
+- Energía importada.
+- Baterías.
+- Autonomía.
+- Retorno de inversión.
+
+### 25.5. Huella ambiental
+
+Preparar un módulo de emisiones de CO₂.
+
+Los factores de emisión deberán depender del país, del periodo y de una fuente documentada.
+
+No utilices factores universales como si fueran válidos para todas las redes eléctricas.
+
+### 25.6. Comparación entre instalaciones
+
+Permitir en futuras versiones comparar diferentes viviendas o instalaciones pertenecientes al mismo usuario.
+
+No compartas información privada automáticamente.
+
+---
+
+# PARTE XX. PRUEBAS Y CRITERIOS DE ACEPTACIÓN
+
+## 26. Pruebas obligatorias
+
+No consideres que la aplicación está terminada simplemente porque la interfaz se visualiza correctamente.
+
+Prueba el funcionamiento real de cada módulo.
+
+### 26.1. Pruebas del motor matemático
+
+Verifica:
+
+- Potencia por tiempo.
+- Conversión W a kW.
+- Conversión Wh a kWh.
+- Consumo por ciclo.
+- Consumo en espera.
+- Tarifas fijas.
+- Bloques marginales.
+- Bloques integrales.
+- Cargos fijos.
+- Impuestos.
+- Redondeos.
+- Comparaciones.
+- Simulaciones.
+
+Incluye pruebas con valores nulos, negativos, límites, decimales y datos incompletos.
+
+### 26.2. Pruebas de facturas
+
+Verifica:
+
+- Creación.
+- Edición.
+- Eliminación.
+- Persistencia.
+- Duplicados.
+- Lecturas.
+- Diferencias aritméticas.
+- Comparación.
+- Recuperación después de reiniciar.
+
+### 26.3. Pruebas de aparatos
+
+Verifica:
+
+- Alta.
+- Modificación.
+- Eliminación.
+- Cálculo mensual.
+- Cálculo anual.
+- Consumo en espera.
+- Cantidades múltiples.
+- Comparaciones.
+
+### 26.4. Pruebas de escenarios
+
+Verifica que cambiar una variable produzca el resultado esperado.
+
+Comprueba que los resultados guardados no cambien retrospectivamente al modificar el aparato original, salvo que se solicite recalcular el escenario.
+
+### 26.5. Pruebas de persistencia
+
+Cierra y vuelve a abrir la aplicación.
+
+Comprueba que:
+
+- Facturas permanezcan almacenadas.
+- Aparatos permanezcan almacenados.
+- Tarifas permanezcan almacenadas.
+- Escenarios permanezcan almacenados.
+- Preferencias permanezcan almacenadas.
+
+### 26.6. Pruebas de interfaz
+
+Comprueba:
+
+- Resolución de escritorio.
+- Resolución móvil.
+- Modo claro.
+- Modo oscuro.
+- Navegación.
+- Diálogos.
+- Formularios largos.
+- Gráficos.
+- Pantallas vacías.
+- Errores.
+
+### 26.7. Criterios de aceptación
+
+VATIO solo podrá considerarse un MVP funcional cuando:
+
+1. Abra sin errores.
+2. Todas las secciones principales sean accesibles.
+3. El usuario pueda introducir una factura.
+4. La factura permanezca guardada después de reiniciar.
+5. La aplicación pueda calcular su consumo y desglose cuando existan datos tarifarios suficientes.
+6. Se puedan registrar varios aparatos.
+7. Se calculen consumos y costos.
+8. Se puedan generar escenarios.
+9. Se puedan consultar diagnósticos.
+10. Se puedan exportar datos.
+11. El motor matemático supere las pruebas básicas.
+12. No haya botones principales sin funcionalidad.
+
+No marques elementos como terminados cuando todavía sean demostraciones.
+
+---
+
+# PARTE XXI. INSTRUCCIONES DE IMPLEMENTACIÓN PARA GOOGLE AI STUDIO
+
+## 27. Orden de trabajo
+
+Quiero que construyas la aplicación, no que te limites a describir cómo construirla.
+
+Sigue este orden de implementación:
+
+**FASE 1 — Fundamentos**
+
+- Crear estructura del proyecto.
+- Configurar React y TypeScript.
+- Crear identidad visual.
+- Crear navegación.
+- Crear almacenamiento IndexedDB.
+- Crear modelos de datos.
+- Implementar configuración inicial.
+- Implementar preferencias.
+
+**FASE 2 — Motor matemático y tarifario**
+
+- Crear conversiones.
+- Crear cálculos energéticos.
+- Crear motor tarifario.
+- Crear cálculos de facturas.
+- Implementar precisión monetaria.
+- Implementar validaciones.
+- Crear pruebas unitarias.
+
+**FASE 3 — Facturas**
+
+- Construir módulo de facturas.
+- Formularios.
+- Persistencia.
+- Desglose.
+- Auditoría.
+- Comparación.
+- Historial.
+
+**FASE 4 — Aparatos**
+
+- Catálogo.
+- Inventario.
+- Cálculos.
+- Comparación.
+- Fichas individuales.
+
+**FASE 5 — Laboratorio**
+
+- Escenarios.
+- Modificación de variables.
+- Simulaciones.
+- Comparación gráfica.
+- Guardado.
+
+**FASE 6 — Diagnóstico**
+
+- Análisis histórico.
+- Anomalías.
+- Comparaciones.
+- Pronósticos.
+- Fichas de diagnóstico.
+
+**FASE 7 — Ahorro**
+
+- Recomendaciones.
+- Priorización.
+- Tareas.
+- Inversiones.
+- Seguimiento.
+
+**FASE 8 — Informes y herramientas**
+
+- PDF.
+- CSV.
+- JSON.
+- Calculadoras.
+- Conversores.
+- Glosario.
+- Centro de ayuda.
+
+**FASE 9 — Calidad**
+
+- Pruebas.
+- Correcciones.
+- Responsividad.
+- Accesibilidad.
+- Persistencia.
+- Rendimiento.
+- Documentación.
+
+No sacrifiques el funcionamiento de las primeras fases para intentar generar precipitadamente todas las pantallas de las fases posteriores.
+
+Completa cada módulo antes de pasar al siguiente.
+
+Si el entorno de generación alcanza un límite de contexto o ejecución, conserva el trabajo realizado y continúa desde el último módulo implementado. No reemplaces el proyecto completo por una versión reducida.
+
+## 28. Reglas estrictas de generación
+
+1. No elimines módulos funcionales para simplificar el proyecto.
+2. No cambies la identidad visual sin una razón técnica.
+3. No sustituyas cálculos reales por números aleatorios.
+4. No introduzcas APIs de pago.
+5. No dependas de Gemini para las operaciones matemáticas.
+6. No inventes fuentes tarifarias.
+7. No dupliques componentes.
+8. No concentres toda la lógica en un solo archivo.
+9. No dejes funciones importantes con `TODO`.
+10. No escondas errores mediante bloques `catch` vacíos.
+11. No utilices datos ficticios como si fueran registros reales.
+12. No uses botones decorativos.
+13. No introduzcas dependencias innecesarias.
+14. No elimines datos cuando modifiques una factura.
+15. No alteres registros históricos al actualizar una tarifa.
+16. No cambies los datos introducidos por el usuario sin su consentimiento.
+17. No presentes datos estimados como mediciones.
+18. No declares implementaciones nativas que todavía no existen.
+19. No generes una interfaz que no funcione en móviles.
+20. No sustituyas el proyecto por una landing page.
+
+## 29. Entregables técnicos
+
+Al terminar, entrega:
+
+- Aplicación funcional.
+- Proyecto React y TypeScript.
+- Estructura modular.
+- Motor matemático.
+- Motor tarifario.
+- Base de datos local.
+- Módulos funcionales.
+- Pruebas.
+- Documentación.
+- Instrucciones de ejecución.
+- Instrucciones para compilar.
+- Instrucciones para integrar Capacitor.
+- Lista exacta de componentes pendientes de integración nativa.
+
+README.md debe explicar:
+
+- Requisitos.
+- Instalación.
+- Ejecución local.
+- Compilación.
+- Pruebas.
+- Persistencia.
+- Estructura del código.
+- Cómo importar una tarifa.
+- Cómo añadir una nueva distribuidora.
+- Cómo añadir un nuevo país.
+- Cómo completar OCR Android.
+
+---
+
+# PARTE XXII. COMPORTAMIENTO ESPERADO DEL AGENTE DE DESARROLLO
+
+## 30. Tu responsabilidad
+
+Actúa simultáneamente como:
+
+- Arquitecto de software.
+- Ingeniero de sistemas.
+- Especialista en React.
+- Desarrollador TypeScript.
+- Ingeniero eléctrico.
+- Especialista en análisis de datos.
+- Diseñador UX/UI.
+- Especialista en visualización de información.
+- Ingeniero de pruebas.
+
+No aceptes soluciones superficiales.
+
+Cuando encuentres una decisión técnica, selecciona la opción más sencilla que mantenga la calidad y la escalabilidad.
+
+Cuando exista una incertidumbre tarifaria, no inventes datos.
+
+Cuando exista una limitación del entorno, implementa la alternativa funcional disponible y documenta la limitación.
+
+Cuando exista un error, corrígelo en lugar de ocultarlo.
+
+Cuando un módulo dependa de otro, implementa primero la dependencia.
+
+No entregues solamente código ilustrativo.
+
+**Construye el código real del proyecto.**
+
+## 31. Primera ejecución
+
+Comienza construyendo VATIO desde sus fundamentos.
+
+Primero verifica las capacidades disponibles del entorno y selecciona la modalidad de aplicación web con React y TypeScript.
+
+Después genera:
+
+1. La estructura de archivos.
+2. El sistema visual completo.
+3. La navegación.
+4. El panel Mi energía.
+5. El esquema de almacenamiento.
+6. El motor matemático.
+7. El motor tarifario.
+8. El módulo de facturas.
+
+Integra estos componentes desde el inicio para que la navegación y los datos estén conectados.
+
+No generes una demostración independiente para cada módulo.
+
+Al finalizar cada fase:
+
+- Ejecuta la aplicación.
+- Comprueba los errores.
+- Corrige los problemas.
+- Comprueba que la persistencia funcione.
+- Comprueba las relaciones entre módulos.
+- Informa qué está implementado y qué falta.
+
+## 32. Resultado final deseado
+
+Quiero que VATIO tenga la calidad visual de un producto comercial, la consistencia matemática de una herramienta de ingeniería y la facilidad de uso de una aplicación destinada al público general.
+
+Su principal fortaleza no debe ser afirmar que utiliza inteligencia artificial.
+
+Su fortaleza debe ser que entiende el consumo eléctrico, calcula correctamente, explica sus resultados y ayuda a tomar mejores decisiones económicas.
+
+**VATIO debe convertirse en un instrumento personal de conocimiento y control energético, no en una simple calculadora de facturas.**
+
+Comienza la implementación.

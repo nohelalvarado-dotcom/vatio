@@ -1,0 +1,1886 @@
+# VATIO — PROMPT MAESTRO 04
+# AUDITORÍA FUNCIONAL INTEGRAL, CERTIFICACIÓN TÉCNICA, ATLAS ENERGÉTICO 3D Y SISTEMA AVANZADO DE ANÁLISIS HISTÓRICO
+
+## MISIÓN GENERAL
+
+Estamos desarrollando VATIO, una plataforma profesional de inteligencia, análisis, diagnóstico y optimización del consumo eléctrico.
+
+El proyecto ya ha pasado por tres fases de desarrollo:
+
+- Fase 1: construcción de los módulos y la arquitectura funcional.
+- Fase 2: renovación integral de la identidad visual, temas, idiomas y experiencia de usuario.
+- Fase 3: optimización multidispositivo, adaptación móvil, escritorio y preparación para Android mediante Capacitor.
+
+Esta cuarta fase tiene dos objetivos:
+
+**OBJETIVO A — CERTIFICACIÓN FUNCIONAL DE VATIO**
+
+Auditar absolutamente todas las secciones, componentes, cálculos, botones, formularios, interacciones, bases de datos, exportaciones y funcionalidades existentes.
+
+Comprobar que cada elemento hace realmente lo que promete.
+
+Corregir los errores encontrados.
+
+Completar las implementaciones que estén incompletas.
+
+Verificar que los módulos estén correctamente conectados.
+
+No quiero funciones que solamente parezcan terminadas.
+
+**OBJETIVO B — NUEVO MÓDULO ATLAS ENERGÉTICO**
+
+Construir un centro profesional de análisis histórico y visualización avanzada que genere gráficos tridimensionales, matrices 3D, tablas analíticas y comparaciones utilizando los datos reales de las facturas eléctricas del usuario.
+
+Los análisis deben conservarse para que el usuario pueda consultar su evolución, comparar meses, estudiar tendencias, identificar máximos y mínimos, examinar gastos y comprender todos los factores energéticos y económicos que VATIO registra.
+
+No construyas un proyecto separado.
+
+Todo debe integrarse en la arquitectura existente de VATIO.
+
+---
+
+# PARTE I. AUDITORÍA TÉCNICA DEL PROYECTO EXISTENTE
+
+## 1. Inspección completa del código
+
+Antes de modificar archivos, realiza una auditoría exhaustiva del proyecto.
+
+Inspecciona:
+
+- Estructura completa de archivos.
+- Componentes React.
+- Tipos TypeScript.
+- Servicios.
+- Hooks.
+- Rutas.
+- Navegación.
+- Bases de datos.
+- Repositorios.
+- Migraciones.
+- Motor matemático.
+- Motor tarifario.
+- Sistema de traducciones.
+- Temas.
+- Adaptación multidispositivo.
+- Integraciones de Capacitor.
+- Generación de documentos.
+- Sistema de exportación.
+- Pruebas existentes.
+
+Identifica qué funcionalidades están:
+
+1. Completamente implementadas.
+2. Implementadas parcialmente.
+3. Implementadas solamente visualmente.
+4. Desconectadas de la base de datos.
+5. Con errores.
+6. Duplicadas.
+7. Incompletas.
+8. Sin pruebas suficientes.
+
+Genera un inventario técnico interno antes de comenzar las modificaciones.
+
+No presupongas que una función está terminada solamente porque existe un botón o un componente con su nombre.
+
+## 2. Protección del proyecto
+
+Esta fase debe conservar absolutamente el trabajo anterior.
+
+Queda prohibido:
+
+- Eliminar módulos que ya funcionan.
+- Reemplazar funcionalidades reales por simulaciones.
+- Eliminar registros.
+- Reiniciar bases de datos.
+- Sustituir el motor matemático por valores ilustrativos.
+- Cambiar estructuras de datos sin migraciones.
+- Destruir configuraciones de Capacitor.
+- Reemplazar la aplicación por una maqueta.
+- Eliminar funciones para simplificar el código.
+
+Si necesitas modificar una estructura existente, conserva su compatibilidad o crea una migración segura.
+
+Antes de efectuar cualquier cambio estructural, verifica que los datos puedan recuperarse.
+
+No hagas operaciones destructivas sobre la base de datos de producción.
+
+## 3. Auditoría de dependencias
+
+Examina:
+
+- package.json.
+- Dependencias instaladas.
+- Versiones.
+- Compatibilidad.
+- Dependencias duplicadas.
+- Bibliotecas abandonadas.
+- Paquetes que no se utilizan.
+
+No actualices paquetes indiscriminadamente.
+
+No cambies las versiones principales del proyecto sin necesidad técnica.
+
+Si necesitas incorporar una biblioteca para las visualizaciones tridimensionales, comprueba primero la arquitectura existente y su compatibilidad con React, TypeScript, Capacitor y Android WebView.
+
+Documenta cualquier dependencia nueva.
+
+---
+
+# PARTE II. CERTIFICACIÓN DE CADA MÓDULO
+
+## 4. Mi energía — Auditoría del dashboard
+
+Comprueba que el panel principal obtiene la información de los registros reales.
+
+Verifica:
+
+- Importe de la última factura.
+- Consumo del último periodo.
+- Variación respecto al periodo anterior.
+- Costo medio.
+- Consumo diario promedio.
+- Consumo acumulado.
+- Gasto acumulado.
+- Ahorro potencial.
+- Número de facturas.
+- Número de aparatos.
+- Actividad reciente.
+- Diagnósticos pendientes.
+- Recomendaciones.
+
+Comprueba que los indicadores se actualicen cuando:
+
+- Se añade una factura.
+- Se edita una factura.
+- Se elimina una factura.
+- Se añade un aparato.
+- Se modifica un aparato.
+- Se cambia la tarifa.
+- Se cambia de instalación.
+
+No permitas valores desactualizados.
+
+Comprueba que cada tarjeta navegue al módulo correspondiente.
+
+Verifica que los cálculos del dashboard coincidan con los resultados de los módulos originales.
+
+Cuando no haya suficientes datos, muestra estados vacíos reales.
+
+No generes cifras ficticias para llenar los indicadores.
+
+## 5. Facturas — Auditoría completa
+
+Comprueba las operaciones:
+
+- Crear factura.
+- Editar factura.
+- Eliminar factura.
+- Consultar factura.
+- Adjuntar fotografía.
+- Adjuntar PDF.
+- Introducir datos manualmente.
+- Revisar información OCR.
+- Confirmar datos.
+- Desglosar importes.
+- Ejecutar auditoría.
+- Comparar facturas.
+- Exportar información.
+- Recuperar registros.
+
+### Comprobaciones matemáticas
+
+Verifica:
+
+- Consumo declarado.
+- Consumo obtenido de las lecturas.
+- Multiplicador del medidor.
+- Días facturados.
+- Energía.
+- Cargos fijos.
+- Impuestos.
+- Cargos adicionales.
+- Total.
+- Costo medio por kWh.
+
+Comprueba casos con datos faltantes, datos incorrectos y periodos atípicos.
+
+La aplicación debe diferenciar entre una inconsistencia matemática y una posible irregularidad de la distribuidora.
+
+Una discrepancia no debe convertirse automáticamente en una acusación de facturación incorrecta.
+
+## 6. Motor tarifario — Auditoría matemática
+
+Realiza pruebas exhaustivas de:
+
+- Tarifas fijas.
+- Bloques marginales.
+- Bloques integrales.
+- Tarifas horarias.
+- Cargos fijos.
+- Impuestos porcentuales.
+- Cargos independientes.
+- Demanda eléctrica cuando esté disponible.
+- Vigencia histórica.
+- Comparación tarifaria.
+
+Comprueba especialmente los límites de los bloques.
+
+Ejemplo de prueba estructural:
+
+```text
+Bloque 1: 0–100 kWh
+Bloque 2: 101–200 kWh
+Bloque 3: más de 200 kWh
+```
+
+Los valores son exclusivamente de prueba.
+
+Comprueba que:
+
+- No exista doble cobro.
+- No existan huecos entre bloques.
+- Los límites se apliquen correctamente.
+- Los impuestos respeten su base.
+- Los redondeos se realicen en el momento adecuado.
+- La suma de componentes coincida con el resultado final.
+
+Comprueba que la aplicación utilice la versión de tarifa vigente para el periodo facturado.
+
+Nunca sobrescribas una tarifa histórica al modificar una tarifa actual.
+
+## 7. Mis aparatos — Auditoría completa
+
+Verifica:
+
+- Registro.
+- Modificación.
+- Duplicación.
+- Archivado.
+- Eliminación.
+- Categorías.
+- Potencia.
+- Horas.
+- Frecuencia.
+- Consumo por ciclo.
+- Consumo en espera.
+- Cantidad.
+- Estimaciones.
+- Costos.
+
+Comprueba las fórmulas para consumo diario, mensual y anual.
+
+Comprueba que las categorías se contabilicen correctamente y que no se duplique el consumo de un mismo aparato.
+
+Verifica que las cifras estimadas estén marcadas como estimadas.
+
+## 8. Laboratorio — Auditoría de simulaciones
+
+Verifica:
+
+- Creación de escenarios.
+- Modificación de variables.
+- Recalculo inmediato.
+- Comparación.
+- Guardado.
+- Duplicación.
+- Edición.
+- Eliminación.
+- Recuperación.
+- Exportación.
+
+Comprueba que las simulaciones utilicen el motor tarifario real.
+
+Comprueba que los escenarios guardados conserven sus datos originales.
+
+Una modificación posterior de un aparato no debe alterar silenciosamente los resultados de un escenario histórico.
+
+## 9. Diagnóstico — Auditoría de análisis
+
+Comprueba:
+
+- Detección de anomalías.
+- Comparaciones.
+- Variaciones porcentuales.
+- Detección de posibles inconsistencias.
+- Niveles de confianza.
+- Predicciones.
+- Evidencias numéricas.
+- Historial.
+- Estados de los diagnósticos.
+- Recomendaciones.
+
+Cada diagnóstico debe poder reproducirse a partir de sus datos de origen.
+
+No generes alertas sin información suficiente.
+
+No confundas el aumento de consumo con el aumento de precio.
+
+No confundas el consumo mensual máximo con la demanda eléctrica instantánea.
+
+## 10. Plan de ahorro — Auditoría
+
+Verifica:
+
+- Recomendaciones.
+- Priorización.
+- Ahorro potencial.
+- Acciones.
+- Tareas.
+- Seguimiento.
+- Inversiones.
+- Recuperación económica.
+- Comparación antes y después.
+
+Comprueba que los ahorros no se sumen de forma incorrecta cuando las acciones son incompatibles o afectan al mismo consumo.
+
+## 11. Calculadora y glosario — Auditoría
+
+Prueba todas las conversiones.
+
+Comprueba las unidades, dimensiones, límites, redondeos y resultados.
+
+Verifica la coherencia de las fórmulas expuestas.
+
+Comprueba que los botones Calcular, Limpiar, Copiar, Guardar y Ver fórmula funcionen.
+
+## 12. Informes y respaldos — Auditoría
+
+Comprueba:
+
+- Generación PDF.
+- Vista previa.
+- Descarga.
+- Impresión.
+- Exportación CSV.
+- Exportación JSON.
+- Respaldo.
+- Restauración.
+- Validación de archivos.
+- Protección contra duplicaciones.
+
+Verifica que los informes reflejen los mismos datos que la aplicación.
+
+Comprueba que los gráficos exportados tengan etiquetas, unidades y periodos correctos.
+
+## 13. Configuración y dispositivo — Auditoría
+
+Comprueba:
+
+- Tema claro.
+- Tema oscuro.
+- Tema automático.
+- Idioma.
+- País.
+- Moneda.
+- Zona horaria.
+- Apariencia.
+- Accesibilidad.
+- Preferencias.
+- Notificaciones.
+- Adaptación móvil.
+- Adaptación de escritorio.
+- Vista previa de dispositivos.
+
+Comprueba que las preferencias sobrevivan al reinicio.
+
+Verifica que cambiar el idioma o la apariencia no modifique los valores almacenados.
+
+## 14. Auditoría de botones, controles y navegación
+
+Realiza una inspección automática y manual de todos los componentes interactivos.
+
+Comprueba:
+
+- Botones.
+- Enlaces.
+- Menús.
+- Pestañas.
+- Selectores.
+- Sliders.
+- Formularios.
+- Modales.
+- Tooltips.
+- Búsquedas.
+- Filtros.
+- Acciones contextuales.
+- Controles de gráficos.
+- Navegación inferior.
+- Barra lateral.
+- Botón atrás de Android.
+
+Ningún botón principal debe ser decorativo.
+
+Ninguna acción debe anunciar una operación que realmente no ejecuta.
+
+Ningún formulario debe confirmar un guardado antes de que este haya terminado.
+
+---
+
+# PARTE III. NUEVO MÓDULO PRINCIPAL: ATLAS ENERGÉTICO
+
+## 15. Identidad del módulo
+
+Nombre:
+
+**ATLAS ENERGÉTICO**
+
+Subtítulo:
+
+«Explora, visualiza y comprende la evolución de tu consumo eléctrico».
+
+Este módulo debe ser un centro de análisis científico, energético, financiero y visual.
+
+Su función consiste en convertir las facturas almacenadas en VATIO en conjuntos de datos estructurados que puedan ser analizados mediante diferentes visualizaciones.
+
+No quiero que sea solamente una página con algunos gráficos.
+
+Debe ser una biblioteca permanente de análisis históricos.
+
+El usuario podrá:
+
+- Generar gráficos automáticamente.
+- Explorar visualizaciones 3D.
+- Construir tablas analíticas.
+- Comparar meses.
+- Comparar años.
+- Identificar máximos y mínimos.
+- Analizar gastos.
+- Analizar consumo.
+- Estudiar variaciones.
+- Examinar componentes económicos.
+- Guardar análisis.
+- Recuperarlos.
+- Duplicarlos.
+- Compararlos.
+- Exportarlos.
+- Crear informes históricos.
+
+## 16. Ubicación en la navegación
+
+Añade una entrada independiente:
+
+**ATLAS ENERGÉTICO**
+
+Ubícala en el grupo de análisis de VATIO, con un icono profesional de gráficos o visualización de datos.
+
+Debe estar disponible en:
+
+- Escritorio.
+- Android.
+- Web móvil.
+- Tablet.
+
+No elimines los gráficos existentes de Mi energía o de otras secciones.
+
+Atlas debe centralizar los análisis avanzados, mientras los demás módulos conservan sus visualizaciones contextuales.
+
+---
+
+# PARTE IV. ESTRUCTURA INTERNA DE ATLAS
+
+## 17. Pantalla principal
+
+Diseña un dashboard analítico con apariencia de centro de investigación energética.
+
+Debe mostrar:
+
+### Indicadores superiores
+
+- Número de facturas analizadas.
+- Periodos disponibles.
+- Consumo acumulado.
+- Gasto acumulado.
+- Promedio mensual.
+- Variación del último periodo.
+- Máximo consumo mensual registrado.
+- Máximo gasto mensual registrado.
+
+Cada indicador debe proceder de información real.
+
+### Selector de instalación
+
+Permite escoger la instalación que se desea analizar.
+
+### Selector temporal
+
+Ofrece:
+
+- Últimos 3 periodos.
+- Últimos 6 periodos.
+- Últimos 12 periodos.
+- Año actual.
+- Año anterior.
+- Todos los registros.
+- Periodo personalizado.
+
+### Acciones principales
+
+- Generar análisis.
+- Crear gráfico.
+- Crear matriz 3D.
+- Comparar periodos.
+- Ver análisis guardados.
+- Exportar.
+
+### Resumen visual
+
+Muestra una selección de gráficos destacados:
+
+- Evolución del consumo.
+- Evolución del gasto.
+- Costo medio por kWh.
+- Consumo diario.
+- Desglose económico.
+- Comparación de periodos.
+
+No generes información ficticia cuando todavía no existan facturas.
+
+---
+
+# PARTE V. MOTOR DE DATOS HISTÓRICOS
+
+## 18. Construir el motor analítico
+
+Implementa un servicio independiente:
+
+`energy-analytics-engine`.
+
+Este módulo será responsable de transformar los datos originales de VATIO en conjuntos de datos listos para visualización.
+
+No coloques cálculos estadísticos dentro de los componentes gráficos.
+
+Arquitectura conceptual:
+
+```typescript
+interface EnergyAnalyticsEngine {
+  buildInvoiceDataset(invoiceIds: string[]): Promise<AnalyticsDataset>;
+
+  calculatePeriodMetrics(
+    dataset: AnalyticsDataset
+  ): PeriodMetrics[];
+
+  comparePeriods(
+    dataset: AnalyticsDataset,
+    periodA: string,
+    periodB: string
+  ): PeriodComparison;
+
+  calculatePeaks(
+    dataset: AnalyticsDataset
+  ): PeakAnalysis;
+
+  calculateTrends(
+    dataset: AnalyticsDataset
+  ): TrendAnalysis;
+
+  calculateStatistics(
+    dataset: AnalyticsDataset
+  ): EnergyStatistics;
+
+  createVisualization(
+    config: VisualizationConfig
+  ): Promise<VisualizationData>;
+}
+```
+
+Adapta estas interfaces al proyecto real.
+
+No es obligatorio utilizar exactamente esta firma, pero sí conservar la separación lógica.
+
+## 19. Datos que debe analizar Atlas
+
+Cada factura puede aportar los siguientes parámetros:
+
+### Energía
+
+- Consumo total en kWh.
+- Días facturados.
+- Consumo medio diario.
+- Consumo acumulado.
+- Consumo por periodo.
+- Variación respecto al anterior.
+- Variación porcentual.
+
+### Economía
+
+- Importe total.
+- Costo medio por kWh.
+- Gasto diario promedio.
+- Gasto mensual.
+- Gasto anual acumulado.
+- Variación del gasto.
+- Cargos fijos.
+- Costos energéticos.
+- Impuestos.
+- Alumbrado público.
+- Otros cargos.
+
+### Lecturas
+
+- Lectura anterior.
+- Lectura actual.
+- Diferencia.
+- Multiplicador del medidor.
+- Consumo calculado a partir de lecturas.
+
+### Tarifas
+
+- Distribuidora.
+- Categoría.
+- Tarifa.
+- Versión histórica.
+- Precio por bloque.
+- Componentes.
+- Vigencia.
+
+### Inventario energético
+
+Cuando exista suficiente información, relaciona los datos con:
+
+- Consumo estimado de aparatos.
+- Costo estimado por categoría.
+- Número de aparatos.
+- Consumo en espera.
+- Distribución estimada.
+
+Es imprescindible diferenciar el consumo facturado del consumo estimado del inventario.
+
+### Otros indicadores
+
+Cuando existan datos:
+
+- Consumo por persona.
+- Consumo por metro cuadrado.
+- Costo por persona.
+- Costo por metro cuadrado.
+- Emisiones estimadas de CO₂.
+- Demanda máxima en kW.
+- Consumo por franjas horarias.
+
+No calcules un indicador cuando falten sus variables.
+
+---
+
+# PARTE VI. ANÁLISIS TEMPORAL CORRECTO
+
+## 20. Comparaciones mensuales
+
+El motor debe permitir comparar periodos de facturación.
+
+Pero debe tener especial cuidado con la duración de los periodos.
+
+Una factura de 28 días no debe compararse directamente con una de 35 días sin explicar la diferencia.
+
+Calcula dos grupos de indicadores:
+
+**Valores originales del periodo**
+
+- kWh facturados.
+- Importe facturado.
+- Días de facturación.
+- Componentes económicos.
+
+**Valores normalizados**
+
+- kWh por día.
+- Costo por día.
+- Costo medio por kWh.
+
+Estos valores permiten comparaciones más justas.
+
+Si los periodos no coinciden con meses calendario, identifícalos como periodos de facturación y no los distribuyas artificialmente entre meses.
+
+Solo puedes dividir el consumo por meses calendario cuando existan lecturas intermedias o información temporal suficiente para hacerlo.
+
+## 21. Comparaciones entre años
+
+Permite:
+
+- Enero contra enero.
+- Febrero contra febrero.
+- Comparación anual.
+- Comparación de acumulados.
+- Variación interanual.
+- Promedios.
+- Máximos.
+- Mínimos.
+
+Si falta un mes, no inventes el dato.
+
+Representa el periodo como ausente.
+
+## 22. Picos y máximos
+
+Esta función es especialmente importante.
+
+Implementa tres conceptos diferentes:
+
+**Máximo consumo mensual**
+
+El mayor valor de kWh registrado entre las facturas disponibles.
+
+**Máximo gasto mensual**
+
+La mayor cantidad monetaria facturada durante un periodo.
+
+**Demanda máxima eléctrica**
+
+La mayor potencia demandada en kW durante un intervalo.
+
+El tercer indicador solamente puede calcularse si la factura o el medidor proporciona datos de demanda.
+
+No infieras picos horarios o instantáneos a partir de un total mensual en kWh.
+
+Si solamente existen facturas mensuales, muestra máximos mensuales y deja la demanda máxima como no disponible.
+
+### Análisis de máximos
+
+Identifica:
+
+- Periodo de máximo consumo.
+- Periodo de mínimo consumo.
+- Periodo de mayor gasto.
+- Periodo de menor gasto.
+- Mayor costo medio por kWh.
+- Mayor consumo diario.
+- Mayor variación porcentual.
+- Mayor aumento económico.
+- Mayor disminución económica.
+
+Cada resultado debe indicar el periodo y los datos que lo justifican.
+
+---
+
+# PARTE VII. GRÁFICOS TRIDIMENSIONALES
+
+## 23. Centro de visualización 3D
+
+Quiero incorporar un sistema avanzado de gráficos 3D.
+
+Debe permitir convertir los datos de las facturas en representaciones tridimensionales e interactivas.
+
+Utiliza una biblioteca técnicamente adecuada para React y WebGL, como una solución compatible basada en Three.js, Plotly u otra herramienta que elijas después de comprobar las dependencias y la compatibilidad real del proyecto.
+
+No añadas varias bibliotecas para hacer lo mismo.
+
+No utilices gráficos 3D solamente como decoración.
+
+Cada eje debe tener significado y unidades.
+
+### 23.1. Gráfico tridimensional de consumo
+
+Crear un gráfico donde:
+
+- Eje X: periodos.
+- Eje Y: año o categoría temporal.
+- Eje Z: consumo en kWh.
+
+El usuario debe poder visualizar la evolución del consumo a través del tiempo.
+
+### 23.2. Gráfico tridimensional de gastos
+
+Crear una visualización con:
+
+- Eje X: periodos.
+- Eje Y: componentes económicos o años.
+- Eje Z: importes monetarios.
+
+Respeta la moneda de la instalación.
+
+No mezcles monedas distintas en una misma escala sin una conversión explícita y una fuente de tipo de cambio documentada.
+
+### 23.3. Gráfico de consumo por categoría
+
+Cuando el inventario proporcione datos suficientes:
+
+- Eje X: periodo.
+- Eje Y: categoría de aparato.
+- Eje Z: consumo estimado.
+
+Marca claramente que este consumo es estimado y no medido directamente por la distribuidora.
+
+### 23.4. Gráfico de costo por kWh
+
+Permite visualizar:
+
+- Periodo.
+- Consumo.
+- Costo efectivo por kWh.
+
+La visualización debe permitir detectar relaciones entre consumo y precio efectivo.
+
+### 23.5. Gráfico tridimensional de componentes de factura
+
+Representa los diferentes componentes:
+
+- Energía.
+- Cargos fijos.
+- Impuestos.
+- Alumbrado público.
+- Otros cargos.
+
+Permite observar qué componentes han contribuido más al importe total.
+
+### 23.6. Gráfico tridimensional de comparación
+
+Permite comparar dos o más periodos:
+
+- Consumo.
+- Gasto.
+- Días facturados.
+- Costo medio.
+- Variación.
+
+No mezcles kWh, CRC y días como magnitudes equivalentes sobre un mismo eje.
+
+Cuando necesites comparar varias unidades, utiliza gráficos independientes, paneles sincronizados o índices normalizados con una explicación visible.
+
+### 23.7. Superficies tridimensionales
+
+Incorpora superficies 3D cuando la cantidad de datos lo permita.
+
+Ejemplo:
+
+- X: mes.
+- Y: año.
+- Z: consumo.
+
+También permite representar:
+
+- Gasto.
+- Costo unitario.
+- Consumo diario.
+
+No generes superficies artificiales a partir de datos inexistentes.
+
+Si faltan periodos, conserva los espacios sin datos en lugar de interpolarlos silenciosamente.
+
+### 23.8. Gráficos tridimensionales de barras
+
+Permite crear barras 3D comparativas.
+
+Deben permitir:
+
+- Comparación mensual.
+- Comparación anual.
+- Selección de series.
+- Tooltip.
+- Identificación de valores.
+- Rotación.
+- Zoom.
+- Desplazamiento.
+
+### 23.9. Gráfico tridimensional de dispersión
+
+Utiliza variables reales para investigar relaciones.
+
+Ejemplos:
+
+- Consumo frente a días facturados y costo total.
+- Consumo frente a costo medio y gasto.
+- Consumo frente a año y periodo.
+
+Cada punto debe corresponder a un periodo identificable.
+
+### 23.10. Controles de gráficos
+
+Cada visualización debe permitir:
+
+- Rotación.
+- Zoom.
+- Desplazamiento.
+- Selección de periodo.
+- Tooltip.
+- Mostrar u ocultar series.
+- Cambiar intervalo temporal.
+- Restablecer cámara.
+- Pantalla completa.
+- Exportar imagen.
+- Exportar datos.
+- Guardar análisis.
+
+En dispositivos móviles utiliza controles táctiles apropiados.
+
+No dependas de un ratón.
+
+### 23.11. Rendimiento 3D
+
+Las visualizaciones 3D deben funcionar correctamente en Android WebView.
+
+Comprueba:
+
+- WebGL.
+- Rendimiento.
+- Memoria.
+- Consumo de batería.
+- Compatibilidad.
+- Orientación.
+- Responsividad.
+
+Si WebGL no está disponible, proporciona una visualización 2D equivalente y claramente identificada.
+
+En teléfonos de capacidad limitada, permite utilizar el modo de visualización ligera.
+
+El usuario debe poder elegir entre:
+
+- Visualización 3D.
+- Visualización 2D.
+- Tabla de datos.
+
+La aplicación nunca debe bloquearse por una visualización 3D.
+
+---
+
+# PARTE VIII. MATRICES Y TABLAS ANALÍTICAS 3D
+
+## 24. Sistema de tablas tridimensionales
+
+Incorpora una herramienta denominada:
+
+**MATRIZ ENERGÉTICA 3D.**
+
+Su función es permitir explorar simultáneamente tres dimensiones de los datos.
+
+Ejemplo:
+
+- Dimensión horizontal: periodos.
+- Segunda dimensión: categorías o componentes.
+- Altura o profundidad: magnitud del valor.
+
+La representación debe ser una matriz tridimensional interactiva donde cada celda represente un valor real.
+
+### 24.1. Matriz de consumo
+
+Permite visualizar:
+
+- Meses.
+- Categorías.
+- kWh.
+
+### 24.2. Matriz de gastos
+
+Permite visualizar:
+
+- Periodos.
+- Componentes de factura.
+- Importe.
+
+### 24.3. Matriz anual
+
+Permite comparar:
+
+- Años.
+- Meses.
+- Valores energéticos.
+
+### 24.4. Matriz de costos
+
+Permite estudiar:
+
+- Periodos.
+- Costo unitario.
+- Consumo.
+
+### 24.5. Selección de valores
+
+Cuando el usuario seleccione una celda, debe mostrar:
+
+- Periodo.
+- Variable.
+- Magnitud.
+- Valor.
+- Unidad.
+- Fuente.
+- Estado del dato.
+
+### 24.6. Tabla convencional sincronizada
+
+No sacrifiques la precisión por una visualización atractiva.
+
+Junto a la matriz 3D debe existir una tabla convencional sincronizada.
+
+La tabla debe permitir:
+
+- Ordenar.
+- Filtrar.
+- Buscar.
+- Seleccionar.
+- Copiar.
+- Exportar CSV.
+- Ver detalles.
+
+En móviles la matriz 3D debe adaptarse y poder sustituirse fácilmente por la tabla convencional.
+
+---
+
+# PARTE IX. BIBLIOTECA HISTÓRICA DE VISUALIZACIONES
+
+## 25. Nueva sección: ANÁLISIS GUARDADOS
+
+Esta es una de las características fundamentales de Atlas.
+
+Quiero que el usuario pueda guardar sus análisis y recuperarlos posteriormente.
+
+Añade una subsección:
+
+**MIS ANÁLISIS**
+
+Debe funcionar como una biblioteca personal de visualizaciones.
+
+### 25.1. Guardar automáticamente los análisis por factura
+
+Cuando una factura sea confirmada y almacenada:
+
+1. Genera los datos analíticos disponibles.
+2. Crea un registro de análisis asociado a la factura.
+3. Genera las visualizaciones pertinentes.
+4. Guarda una referencia a la factura original.
+5. Conserva la versión del registro utilizada.
+6. Permite consultar ese análisis posteriormente.
+
+No guardes gráficos vacíos.
+
+No generes visualizaciones que requieran información que la factura no contiene.
+
+### 25.2. Guardar manualmente
+
+El usuario también debe poder guardar cualquier análisis que cree.
+
+Datos del análisis:
+
+- Nombre.
+- Descripción.
+- Fecha.
+- Instalación.
+- Periodo.
+- Facturas utilizadas.
+- Tipo de gráfico.
+- Variables.
+- Filtros.
+- Configuración visual.
+- Estado.
+- Versión de los datos.
+
+Ejemplo:
+
+«Comparación de consumo enero–junio 2026».
+
+«Evolución del gasto eléctrico anual».
+
+«Análisis de componentes de facturación».
+
+### 25.3. Biblioteca de análisis
+
+Diseña una biblioteca visual con tarjetas que presenten:
+
+- Título.
+- Tipo de visualización.
+- Periodo.
+- Variables.
+- Fecha de creación.
+- Instalación.
+- Vista previa.
+- Acciones.
+
+Acciones:
+
+- Abrir.
+- Editar.
+- Duplicar.
+- Comparar.
+- Exportar.
+- Renombrar.
+- Eliminar.
+
+### 25.4. Historial por factura
+
+Cada factura debe tener acceso a su análisis.
+
+Al abrir la factura:
+
+- Mostrar resumen analítico.
+- Mostrar gráficos relacionados.
+- Acceder al análisis histórico.
+- Comparar con otros periodos.
+
+### 25.5. Actualización y versionado
+
+Cuando se modifique una factura:
+
+- Identifica qué análisis dependen de ella.
+- Informa al usuario de que sus datos de origen cambiaron.
+- Permite regenerar el análisis.
+- Conserva el registro anterior cuando ya fue guardado como informe histórico.
+- No sobrescribas silenciosamente resultados anteriores.
+
+Los análisis deben ser reproducibles.
+
+---
+
+# PARTE X. COMPARADOR HISTÓRICO AVANZADO
+
+## 26. Comparador de periodos
+
+Crea una herramienta específica llamada:
+
+**COMPARAR PERIODOS.**
+
+Debe permitir seleccionar:
+
+- Dos meses.
+- Varios meses.
+- Dos años.
+- Varios años.
+- Periodo personalizado.
+- Todas las facturas disponibles.
+
+### 26.1. Comparación económica
+
+Mostrar:
+
+- Gasto total.
+- Diferencia.
+- Variación porcentual.
+- Cargos.
+- Impuestos.
+- Costo efectivo por kWh.
+
+### 26.2. Comparación energética
+
+Mostrar:
+
+- kWh.
+- Consumo diario.
+- Diferencia.
+- Variación porcentual.
+- Máximo.
+- Mínimo.
+- Promedio.
+
+### 26.3. Comparación tarifaria
+
+Mostrar:
+
+- Tarifa de cada periodo.
+- Vigencia.
+- Componentes.
+- Precio energético.
+- Diferencias tarifarias.
+
+### 26.4. Comparación de estructura
+
+Permite conocer si un incremento se debe a:
+
+- Más energía consumida.
+- Cambio de tarifa.
+- Más días facturados.
+- Nuevos cargos.
+- Aumento de impuestos.
+- Cambios en la composición de la factura.
+
+Separa las causas demostradas de las posibles explicaciones.
+
+### 26.5. Comparación visual
+
+Presenta:
+
+- Gráfico de líneas.
+- Gráfico de barras.
+- Tabla comparativa.
+- Variaciones porcentuales.
+- Gráfico 3D.
+
+### 26.6. Análisis de tendencias
+
+Cuando existan suficientes registros, calcula:
+
+- Tendencia de consumo.
+- Tendencia de gasto.
+- Tendencia de costo por kWh.
+- Tendencia de consumo diario.
+- Evolución de los componentes.
+
+Explica la metodología utilizada.
+
+No extrapoles tendencias de pocos registros sin advertirlo.
+
+---
+
+# PARTE XI. SISTEMA DE ESTADÍSTICAS ENERGÉTICAS
+
+## 27. Biblioteca de indicadores
+
+Construye un sistema de estadísticas que permita conocer todos los indicadores calculables a partir de los datos del usuario.
+
+### Consumo
+
+- Total.
+- Promedio.
+- Mediana.
+- Máximo.
+- Mínimo.
+- Desviación estándar.
+- Variación mensual.
+- Variación anual.
+- Consumo diario.
+- Consumo acumulado.
+
+### Gastos
+
+- Gasto total.
+- Promedio.
+- Mediana.
+- Máximo.
+- Mínimo.
+- Gasto diario.
+- Gasto anual.
+- Variación.
+- Costo medio unitario.
+
+### Tarifas
+
+- Costo efectivo por kWh.
+- Precio energético.
+- Cargos fijos.
+- Impuestos.
+- Componentes.
+- Variaciones tarifarias.
+
+### Tiempo
+
+- Días facturados.
+- Duración promedio.
+- Comparación normalizada.
+- Periodos atípicos.
+
+### Aparatos
+
+- Consumo estimado por categoría.
+- Costo estimado.
+- Distribución.
+- Aparatos de mayor consumo.
+- Consumo en espera.
+- Diferencia entre estimación y facturación.
+
+### Estadísticas complementarias
+
+Cuando existan datos adecuados:
+
+- Consumo por persona.
+- Consumo por superficie.
+- Demanda máxima.
+- Consumo horario.
+- Huella de carbono.
+- Producción solar.
+- Autoconsumo.
+
+No muestres un indicador como disponible cuando no existan sus variables de entrada.
+
+---
+
+# PARTE XII. CALIDAD Y PROCEDENCIA DE LOS DATOS
+
+## 28. Clasificación de información
+
+Conserva el sistema de clasificación de VATIO:
+
+- MEDIDO.
+- DECLARADO.
+- CALCULADO.
+- ESTIMADO.
+- PREDICHO.
+- NO VERIFICADO.
+
+Cada visualización debe poder identificar la procedencia de sus datos.
+
+Por ejemplo:
+
+Un gráfico que combina consumo facturado y consumo estimado por aparatos debe diferenciar visualmente las dos series.
+
+No mezcles categorías sin explicar la diferencia.
+
+## 29. Datos ausentes
+
+Cuando un periodo no tenga factura:
+
+- Representa el espacio como ausente.
+- No introduzcas cero como sustituto.
+- No interpolas valores automáticamente.
+- Permite filtrar periodos incompletos.
+
+Cuando existan facturas con monedas distintas, sepáralas o solicita una conversión explícita.
+
+Cuando los periodos tengan duraciones distintas, muestra valores originales y normalizados.
+
+## 30. Trazabilidad
+
+Cada valor de Atlas debe poder rastrearse hasta:
+
+- Factura.
+- Campo original.
+- Fórmula.
+- Versión de tarifa.
+- Fecha.
+- Fuente de información.
+
+Añade un control:
+
+«Ver origen del dato».
+
+Al pulsarlo, muestra de dónde procede el valor.
+
+Si es un dato calculado, presenta la operación.
+
+Si es un dato declarado, muestra el campo original de la factura.
+
+Si es un estimado, muestra sus supuestos.
+
+---
+
+# PARTE XIII. BASE DE DATOS DE ANÁLISIS
+
+## 31. Persistencia
+
+Utiliza el sistema de almacenamiento existente de VATIO.
+
+No crees una segunda base de datos independiente.
+
+Incorpora las entidades necesarias mediante migraciones.
+
+Modelos conceptuales:
+
+### AnalyticsSnapshot
+
+```typescript
+interface AnalyticsSnapshot {
+  id: string;
+  householdId: string;
+  invoiceId?: string;
+  invoiceVersion?: number;
+  title: string;
+  periodStart?: string;
+  periodEnd?: string;
+  dataType: string;
+  createdAt: string;
+  generatedAt: string;
+  sourceInvoiceIds: string[];
+  methodologyVersion: string;
+  sourceHash?: string;
+  status: string;
+}
+```
+
+### SavedVisualization
+
+```typescript
+interface SavedVisualization {
+  id: string;
+  householdId: string;
+  title: string;
+  description?: string;
+  chartType: string;
+  dimensions: string[];
+  metrics: string[];
+  dateRange?: string;
+  sourceSnapshotIds: string[];
+  configuration: Record<string, unknown>;
+  createdAt: string;
+  updatedAt: string;
+  isFavorite: boolean;
+}
+```
+
+### PeriodMetrics
+
+```typescript
+interface PeriodMetrics {
+  id: string;
+  householdId: string;
+  periodStart: string;
+  periodEnd: string;
+  billingDays: number;
+  consumptionKwh?: number;
+  dailyConsumptionKwh?: number;
+  totalCostMinorUnits?: number;
+  averageCostPerKwh?: number;
+  currency: string;
+  tariffId?: string;
+  dataQuality: string;
+  sourceInvoiceId: string;
+  createdAt: string;
+}
+```
+
+Adapta estos modelos a la estructura real del proyecto.
+
+No guardes copias innecesarias de grandes archivos o gráficos renderizados.
+
+Prioriza almacenar configuraciones, datos estructurados, referencias y resultados reproducibles.
+
+Para gráficos exportados como imágenes, utiliza almacenamiento de archivos únicamente cuando corresponda.
+
+---
+
+# PARTE XIV. DISEÑO Y USABILIDAD DE ATLAS
+
+## 32. Identidad visual
+
+Atlas debe mantener el lenguaje premium de VATIO.
+
+Quiero:
+
+- Fondos azul noche.
+- Superficies analíticas.
+- Verde energético.
+- Cian tecnológico.
+- Tipografía profesional.
+- Tarjetas de datos.
+- Gráficos sofisticados.
+- Transiciones discretas.
+
+Los gráficos 3D deben destacar, pero no dominar toda la aplicación.
+
+## 33. Panel de control de visualización
+
+Cada gráfico debe disponer de una barra contextual con:
+
+- Selección de periodo.
+- Selección de métrica.
+- Selección de tipo de gráfico.
+- Mostrar/ocultar series.
+- Pantalla completa.
+- Restablecer.
+- Guardar.
+- Exportar.
+
+## 34. Vista de escritorio
+
+En escritorio:
+
+- Menú lateral.
+- Selector de periodo.
+- Paneles de indicadores.
+- Gráficos amplios.
+- Matriz 3D.
+- Tabla sincronizada.
+- Biblioteca lateral de análisis guardados cuando resulte útil.
+
+## 35. Vista de Android
+
+En móvil:
+
+- Gráficos 3D adaptados al ancho.
+- Controles táctiles.
+- Rotación y zoom accesibles.
+- Selector de métricas compacto.
+- Alternativa 2D inmediata.
+- Tabla vertical o desplazable.
+- Acceso a análisis guardados.
+
+No reduzcas un gráfico de escritorio hasta volverlo ilegible.
+
+---
+
+# PARTE XV. PRUEBAS UNITARIAS, INTEGRACIÓN Y EXTREMO A EXTREMO
+
+## 36. Estrategia de pruebas
+
+Implementa una estrategia de calidad en tres niveles.
+
+**Pruebas unitarias**
+
+Para funciones matemáticas, conversiones, validaciones, estadísticas y motores.
+
+**Pruebas de integración**
+
+Para formularios, repositorios, servicios, bases de datos y relaciones entre módulos.
+
+**Pruebas de extremo a extremo (E2E)**
+
+Para flujos completos del usuario.
+
+Utiliza el sistema de pruebas existente.
+
+Si no existe uno suficiente, incorpora herramientas compatibles con la arquitectura actual, sin introducir dependencias innecesarias.
+
+## 37. Casos de prueba obligatorios
+
+### Caso A — Primera factura
+
+1. Crear instalación.
+2. Registrar factura.
+3. Introducir consumo.
+4. Introducir importe.
+5. Seleccionar tarifa.
+6. Guardar.
+7. Consultar factura.
+8. Comprobar desglose.
+9. Comprobar auditoría.
+10. Verificar aparición en dashboard.
+11. Verificar aparición en Atlas.
+12. Generar gráfico.
+13. Guardar análisis.
+14. Reiniciar aplicación.
+15. Comprobar persistencia.
+
+Todo el flujo debe funcionar sin datos ficticios.
+
+### Caso B — Comparación de facturas
+
+1. Registrar dos facturas.
+2. Comparar consumo.
+3. Comparar gasto.
+4. Comparar días facturados.
+5. Normalizar valores diarios.
+6. Analizar variaciones.
+7. Generar gráfico.
+8. Guardar comparación.
+9. Consultar posteriormente.
+
+### Caso C — Modificación de factura
+
+1. Abrir factura.
+2. Modificar un dato.
+3. Guardar.
+4. Actualizar los análisis dependientes.
+5. Identificar los snapshots anteriores.
+6. Evitar cambios retroactivos silenciosos.
+7. Permitir regeneración.
+
+### Caso D — Tarifas
+
+Probar todos los tipos de tarifa.
+
+Utilizar valores conocidos y resultados esperados calculados independientemente.
+
+Verificar los límites de bloques, impuestos, cargos y redondeos.
+
+### Caso E — Aparatos
+
+1. Añadir aparatos.
+2. Calcular consumo.
+3. Calcular costos.
+4. Cambiar horas.
+5. Actualizar resultados.
+6. Comparar con facturas.
+7. Guardar historial.
+
+### Caso F — Escenarios
+
+Crear escenarios, modificarlos, compararlos, guardarlos y recuperarlos después de reiniciar.
+
+### Caso G — Atlas
+
+1. Abrir Atlas.
+2. Seleccionar periodos.
+3. Generar análisis.
+4. Crear gráfico 3D.
+5. Rotar.
+6. Aplicar zoom.
+7. Seleccionar puntos.
+8. Abrir origen del dato.
+9. Cambiar métrica.
+10. Crear matriz 3D.
+11. Consultar tabla sincronizada.
+12. Guardar.
+13. Duplicar.
+14. Comparar.
+15. Exportar.
+16. Reiniciar.
+17. Recuperar análisis guardado.
+
+### Caso H — Datos incompletos
+
+Comprobar que Atlas gestione correctamente:
+
+- Periodos faltantes.
+- Facturas incompletas.
+- Falta de tarifa.
+- Monedas distintas.
+- Ausencia de componentes.
+- Datos estimados.
+- Pocos registros.
+
+### Caso I — Android
+
+Probar, cuando exista un entorno disponible:
+
+- Navegación.
+- Gráficos 3D.
+- Cámara.
+- Teclado.
+- Exportación.
+- Compartir.
+- Persistencia.
+- Cambio de orientación.
+- Safe areas.
+
+No declares probadas funciones nativas en un teléfono físico si solo se ha utilizado un navegador.
+
+---
+
+# PARTE XVI. CRITERIOS DE CERTIFICACIÓN
+
+## 38. Matriz de aceptación por módulo
+
+Crea una tabla interna de control para cada módulo.
+
+Columnas:
+
+- Módulo.
+- Función.
+- Estado de implementación.
+- Prueba ejecutada.
+- Resultado esperado.
+- Resultado obtenido.
+- Estado final.
+- Evidencia.
+
+Estados permitidos:
+
+- APROBADO.
+- FALLIDO.
+- PARCIAL.
+- NO PROBADO.
+- BLOQUEADO POR DEPENDENCIA.
+
+No marques APROBADO cuando una función solamente fue visualizada.
+
+Solo marca una prueba como superada cuando se haya ejecutado y su resultado coincida con lo esperado.
+
+## 39. Criterios de calidad
+
+Exijo:
+
+- 100 % de los flujos críticos identificados cubiertos por pruebas.
+- 100 % de las operaciones principales comprobadas.
+- Todos los botones principales conectados a acciones reales.
+- Todas las rutas principales funcionales.
+- Todos los cálculos críticos validados con casos de prueba.
+- Ninguna pérdida de datos en las pruebas de persistencia.
+- Ningún error crítico conocido sin documentar.
+- Ningún dato de demostración presentado como real.
+- Ninguna dependencia de IA de pago para cálculos energéticos.
+- Ninguna regresión funcional introducida por esta fase.
+
+La cobertura de líneas de código no equivale a corrección matemática ni funcional.
+
+Mide por separado:
+
+- Cobertura de código.
+- Cobertura de requisitos.
+- Cobertura de flujos.
+- Precisión de cálculos.
+- Integridad de datos.
+
+No inventes una puntuación del 100 %.
+
+Si hay fallos, corrígelos y vuelve a ejecutar las pruebas.
+
+Si alguna prueba no puede realizarse, márcala como NO PROBADO y explica por qué.
+
+---
+
+# PARTE XVII. OPTIMIZACIÓN Y COMPATIBILIDAD
+
+## 40. Rendimiento general
+
+Comprueba:
+
+- Carga inicial.
+- Navegación.
+- Persistencia.
+- Cálculos.
+- Exportaciones.
+- Renderizado.
+- Memoria.
+- Gráficos 3D.
+
+No cargues todos los gráficos 3D al entrar en Atlas.
+
+Genera las visualizaciones bajo demanda.
+
+Utiliza mecanismos de limpieza de recursos WebGL al abandonar una vista.
+
+Evita fugas de memoria.
+
+## 41. Compatibilidad multidispositivo
+
+Prueba:
+
+- Android 360 px.
+- Android 390 px.
+- Android 412 px.
+- Tablet 768 px.
+- Escritorio 1280 px.
+- Escritorio 1440 px.
+- Escritorio 1920 px.
+
+Comprueba ambas orientaciones en móvil.
+
+Verifica que Atlas tenga una alternativa utilizable cuando el rendimiento gráfico sea limitado.
+
+## 42. Compatibilidad con versiones de almacenamiento
+
+Prueba migraciones.
+
+Comprueba que los registros históricos existentes sigan siendo accesibles.
+
+No obligues al usuario a borrar datos para utilizar Atlas.
+
+Si es necesario reindexar datos, hazlo sin alterar las facturas originales.
+
+---
+
+# PARTE XVIII. ENTREGA FINAL
+
+## 43. Informe técnico de cierre
+
+Al finalizar, genera un informe completo que contenga:
+
+### A. Auditoría general
+
+- Archivos inspeccionados.
+- Módulos revisados.
+- Problemas encontrados.
+- Problemas corregidos.
+- Problemas pendientes.
+
+### B. Estado funcional por sección
+
+Presenta una tabla de:
+
+- Mi energía.
+- Facturas.
+- Tarifas.
+- Aparatos.
+- Laboratorio.
+- Diagnóstico.
+- Plan de ahorro.
+- Calculadora.
+- Glosario.
+- Informes y respaldos.
+- Configuración.
+- Dispositivo y experiencia.
+- Atlas energético.
+
+Indica el resultado real de sus pruebas.
+
+### C. Atlas energético
+
+Documenta:
+
+- Motor analítico.
+- Fuentes de datos.
+- Tipos de gráficos 3D.
+- Matrices 3D.
+- Tablas.
+- Comparador.
+- Máximos y mínimos.
+- Estadísticas.
+- Biblioteca de análisis.
+- Persistencia.
+- Exportación.
+
+### D. Pruebas
+
+Indica:
+
+- Pruebas unitarias ejecutadas.
+- Pruebas de integración.
+- Pruebas E2E.
+- Flujos críticos cubiertos.
+- Errores detectados.
+- Errores corregidos.
+- Pruebas que no pudieron realizarse.
+
+### E. Android
+
+Indica:
+
+- Estado de Capacitor.
+- Estado de compilación.
+- Compatibilidad WebView.
+- Estado de gráficos 3D.
+- Funciones nativas disponibles.
+- Integraciones pendientes.
+
+### F. Seguridad e integridad
+
+Indica:
+
+- Estado de persistencia.
+- Migraciones.
+- Protección de datos.
+- Exportación.
+- Restauración.
+- Integridad de los registros.
+
+---
+
+# PARTE XIX. DIRECTIVA FINAL DE EJECUCIÓN
+
+Quiero que trabajes directamente sobre el proyecto real de VATIO.
+
+No me entregues una lista de ideas.
+
+No me entregues solamente una auditoría escrita.
+
+No te limites a crear una página de gráficos 3D.
+
+Implementa los cambios.
+
+Prueba los cambios.
+
+Corrige los errores.
+
+Vuelve a probar.
+
+La calidad de Atlas debe ser equivalente a la de una herramienta profesional de análisis energético.
+
+La calidad del resto de VATIO debe ser comprobable, no solamente estética.
+
+**REGLAS INNEGOCIABLES:**
+
+1. No eliminar funciones anteriores.
+2. No eliminar datos existentes.
+3. No sustituir datos reales por datos ficticios.
+4. No utilizar números aleatorios.
+5. No confundir estimaciones con mediciones.
+6. No inventar datos de demanda máxima.
+7. No mezclar monedas sin conversión documentada.
+8. No producir gráficos 3D con ejes dimensionalmente incompatibles.
+9. No guardar análisis sin identificar sus fuentes.
+10. No declarar una prueba superada si no se ejecutó.
+11. No declarar una función nativa implementada sin haberla probado.
+12. No crear botones decorativos.
+13. No ocultar errores.
+14. No reducir la aplicación a un prototipo.
+15. No introducir APIs de pago.
+16. No destruir la compatibilidad con Android.
+17. No introducir migraciones destructivas.
+18. No sobrescribir silenciosamente análisis históricos.
+19. No perjudicar la experiencia móvil para mejorar la de escritorio.
+20. No perjudicar la experiencia de escritorio para mejorar la de móvil.
+
+Si el entorno tiene limitaciones de ejecución o contexto, conserva el trabajo realizado y continúa desde el último punto completado. No elimines módulos para compensar esas limitaciones.
+
+**RESULTADO FINAL QUE DEBES CONSEGUIR**
+
+VATIO debe quedar convertido en una plataforma que no solamente registra cuánto consume una vivienda, sino que permite estudiar su comportamiento energético a través del tiempo.
+
+El usuario debe poder introducir sus facturas, generar análisis automáticos, construir gráficos y matrices tridimensionales, encontrar máximos y mínimos, comparar periodos, estudiar los componentes económicos y conservar toda su investigación energética.
+
+Debe poder regresar dentro de seis meses o tres años y consultar sus análisis anteriores.
+
+Cada resultado debe tener origen, metodología y trazabilidad.
+
+Cada sección debe funcionar realmente.
+
+Cada operación importante debe poder verificarse.
+
+Cada visualización debe representar información auténtica.
+
+**VATIO debe ser una herramienta de conocimiento energético, análisis matemático y control económico, no una simple calculadora con gráficos decorativos.**
+
+Comienza la auditoría, implementa ATLAS ENERGÉTICO y lleva el proyecto a su máximo nivel técnico y funcional.
